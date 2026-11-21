@@ -43,7 +43,7 @@ metrics (LLM calls). See [Judge providers](docs/judge-providers.md).
 | Privacy and judge data flows | [`docs/privacy-and-data.md`](docs/privacy-and-data.md) |
 | Self-hosted judge (vLLM) | [`docs/self-hosting.md`](docs/self-hosting.md) |
 
-Docs site: <https://vectorinstitute.github.io/aixeval/>. Preview it
+Docs site: <https://vectorinstitute.github.io/AIXEval/>. Preview it
 locally with `uv run mkdocs serve`.
 
 Per-metric rationale and citations also live in module docstrings under
@@ -101,5 +101,5 @@ See [`CITATION.cff`](CITATION.cff).
 
 ```text
 Vector Institute. (2026). AIXeval (Version 0.1.1) [Computer software].
-https://github.com/VectorInstitute/aixeval
+https://github.com/VectorInstitute/AIXEval
 ```

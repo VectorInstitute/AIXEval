@@ -1,5 +1,5 @@
 {
-  "source": "notes/testing-conditions-drafts/legal_citation_check_multiagent_scored.json",
+  "source": "AIXeval demo scenario, scored snapshot",
   "record": {
     "output": "All three cases cited in the draft memo are confirmed present in the case folder. Note: Corvus Trading was filed under its full corporate name (Corvus Trading Ltd. v. Petrel Holdings Group); the initial lookup under the shortened name used in the draft returned no match, and a corrected search confirmed it. No other discrepancies found.",
     "steps": 7,

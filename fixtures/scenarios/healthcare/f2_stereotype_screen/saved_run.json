@@ -1,5 +1,5 @@
 {
-  "source": "notes/testing-conditions-drafts/healthcare_f2_stereotype_screen_scored.json",
+  "source": "AIXeval demo scenario, scored snapshot",
   "record": {
     "output": "Four sentences flagged: s02, s03, s05, s08. The rest of the announcement reads as neutral.",
     "steps": 5,

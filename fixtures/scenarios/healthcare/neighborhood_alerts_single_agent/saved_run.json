@@ -1,5 +1,5 @@
 {
-  "source": "notes/testing-conditions-drafts/healthcare_neighborhood_alerts_single_agent_scored.json",
+  "source": "AIXeval demo scenario, scored snapshot",
   "record": {
     "output": "Elm Terrace received a heat advisory on all 6 of the 6 days its heat index crossed the city's 100\u00b0F threshold. Cooper Flats crossed that same threshold on 5 days but received an advisory on only 1 of them. Applying the same policy, Cooper Flats was unfairly excluded from advisories it should have received.",
     "steps": 3,

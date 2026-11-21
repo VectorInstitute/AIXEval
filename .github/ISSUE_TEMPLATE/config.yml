@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
   - name: Documentation
-    url: https://github.com/VectorInstitute/aixeval#readme
+    url: https://github.com/VectorInstitute/AIXEval#readme
     about: README, methodology, limitations, and privacy pages
   - name: Security report
-    url: https://github.com/VectorInstitute/aixeval/blob/main/SECURITY.md
+    url: https://github.com/VectorInstitute/AIXEval/blob/main/SECURITY.md
     about: Email shaina.raza@vectorinstitute.ai. Do not file a public issue.
   - name: Support
-    url: https://github.com/VectorInstitute/aixeval/blob/main/CONTRIBUTING.md
+    url: https://github.com/VectorInstitute/AIXEval/blob/main/CONTRIBUTING.md
     about: Vector AI Engineering triages issues; we aim to acknowledge within five business days

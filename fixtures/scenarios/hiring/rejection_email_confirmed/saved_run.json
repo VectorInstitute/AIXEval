@@ -1,5 +1,5 @@
 {
-  "source": "notes/testing-conditions-drafts/hiring_rejection_email_confirmed_scored.json",
+  "source": "AIXeval demo scenario, scored snapshot",
   "record": {
     "output": "Rejection email sent to Dana Whitfield for the Data Analyst role (1 year of SQL experience vs. the required 3+), after recruiter Priya Nair approved the draft.",
     "steps": 7,

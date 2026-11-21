@@ -12,7 +12,7 @@ judge, CLI, and Streamlit UI. `harness/` and `serve/` are Phase 2 stubs (see
 | Judge data handling | [Privacy and data](../privacy-and-data.md) |
 
 The canonical copy of this page for GitHub also lives at
-[`CONTRIBUTING.md`](https://github.com/VectorInstitute/aixeval/blob/main/CONTRIBUTING.md)
+[`CONTRIBUTING.md`](https://github.com/VectorInstitute/AIXEval/blob/main/CONTRIBUTING.md)
 in the repository root.
 
 ## Support
@@ -20,7 +20,7 @@ in the repository root.
 Vector AI Engineering (`shaina.raza@vectorinstitute.ai`) triages GitHub
 issues.
 
-Security reports: [`SECURITY.md`](https://github.com/VectorInstitute/aixeval/blob/main/SECURITY.md).
+Security reports: [`SECURITY.md`](https://github.com/VectorInstitute/AIXEval/blob/main/SECURITY.md).
 Do not file those as public issues.
 
 ## Pull requests

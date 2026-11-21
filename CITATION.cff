@@ -7,8 +7,8 @@ authors:
     website: "https://vectorinstitute.ai"
     email: shaina.raza@vectorinstitute.ai
 license: Apache-2.0
-repository-code: "https://github.com/VectorInstitute/aixeval"
-url: "https://github.com/VectorInstitute/aixeval"
+repository-code: "https://github.com/VectorInstitute/AIXEval"
+url: "https://github.com/VectorInstitute/AIXEval"
 abstract: >-
   Post-hoc scorecard for a saved agent run. Ingest a dump or
   multi-agent trace, score a metric catalog, and roll the
@@ -27,6 +27,6 @@ preferred-citation:
   authors:
     - name: "Vector Institute"
   year: 2026
-  url: "https://github.com/VectorInstitute/aixeval"
+  url: "https://github.com/VectorInstitute/AIXEval"
 # When the paper is out, replace preferred-citation with the
 # article entry and keep this software record.

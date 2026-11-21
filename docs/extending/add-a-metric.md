@@ -22,8 +22,8 @@ rest of the catalog. Missing evidence must be **N/A**, never a silent `0.0`.
 
 Study an existing scorer:
 
-- **Computed / library:** [`bleu.py`](https://github.com/VectorInstitute/aixeval/blob/main/src/aixeval/scorecard/bleu.py)
-- **Token overlap:** [`f1.py`](https://github.com/VectorInstitute/aixeval/blob/main/src/aixeval/scorecard/f1.py)
+- **Computed / library:** [`bleu.py`](https://github.com/VectorInstitute/AIXEval/blob/main/src/aixeval/scorecard/bleu.py)
+- **Token overlap:** [`f1.py`](https://github.com/VectorInstitute/AIXEval/blob/main/src/aixeval/scorecard/f1.py)
 - **Declared bools:** see `error_recovery.py`, `unsafe_action.py`
 
 Document literature, edge cases, and required record fields in the module

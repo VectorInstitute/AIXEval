@@ -1,5 +1,5 @@
 {
-  "source": "notes/testing-conditions-drafts/legal_case_holding_sequential_scored.json",
+  "source": "AIXeval demo scenario, scored snapshot",
   "record": {
     "output": "In Meridian Fabrication Co. v. Castellan Logistics, Inc., 2019 WL 4471203 (N.D. Ill. 2019), the court held that a limitation-of-liability clause in a commercial shipping contract is enforceable against a sophisticated commercial party even where the resulting loss exceeds the clause's dollar cap, so long as the clause was conspicuously disclosed in the contract and was not the product of unequal bargaining power between the parties.",
     "steps": 3,

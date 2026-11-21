@@ -55,6 +55,6 @@ AI Engineering with community contributions via GitHub.
 | Funding and sponsors | [Acknowledgments](acknowledgments.md) |
 | Licence, trademarks, how to cite | [Licence and citation](license-and-citation.md) |
 | Contact and pull requests | [Contributing](../extending/contributing.md) |
-| Security reports | [`SECURITY.md`](https://github.com/VectorInstitute/aixeval/blob/main/SECURITY.md) on GitHub |
+| Security reports | [`SECURITY.md`](https://github.com/VectorInstitute/AIXEval/blob/main/SECURITY.md) on GitHub |
 
 Support triage: `shaina.raza@vectorinstitute.ai`.

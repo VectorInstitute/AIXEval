@@ -1,5 +1,5 @@
 {
-  "source": "notes/2026-10-30-build-demo-scenarios.py (live judges: VectorClient claude-opus-5-5, 2026-10-30)",
+  "source": "AIXeval demo scenario, scored snapshot (live judges: claude-opus-5-5, 2026-10-30)",
   "record": {
     "output": "The outlets disagree on two points: the budget ($4.1M in the Harbour Ledger vs $3.8M in the Valley Courier) and the construction start (spring 2027 vs fall 2027). Both report a 7-2 vote with the mayor in favour.",
     "latency_sec": 44.0,
