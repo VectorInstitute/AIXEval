@@ -22,7 +22,7 @@ hide:
         <a class="aix-btn aix-btn--primary" href="getting-started/">Get started</a>
         <a class="aix-btn aix-btn--ghost" href="metric-catalog/">Metric catalog</a>
         <a class="aix-btn aix-btn--ghost" href="https://github.com/VectorInstitute/AIXEval">GitHub</a>
-        <a class="aix-btn aix-btn--ghost" href="https://arxiv.org/abs/2609.19524" target="_blank" rel="noopener noreferrer">Documentation</a>
+        <a class="aix-btn aix-btn--ghost" href="https://arxiv.org/abs/2609.19524" target="_blank" rel="noopener noreferrer">To read</a>
       </div>
       <div class="aix-hero__tags">
         <span class="aix-tag">Python &ge; 3.12</span>
@@ -138,3 +138,7 @@ sponsors, and the EU **Horizon AIXPERT** project
 ([101214389](https://cordis.europa.eu/project/id/101214389)).
 [Full acknowledgments](about/acknowledgments.md) ·
 [Licence and citation](about/license-and-citation.md)
+
+
+**Correspondence:** [Email](mailto:shaina.raza@vectorinstitute.ai)
+
