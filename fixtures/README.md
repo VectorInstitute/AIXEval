@@ -85,7 +85,8 @@ and a `content_note`.
 New **run bundles** (`schema_version: "1"`) record `judge` when live
 metrics ran.
 
-The shipped `saved_run.json` files **do not** name the judge that
-produced their example grades. Do not treat those grades as
-reproducible against a live provider. Re-score with `--live-judges`
+The shipped `saved_run.json` files **do not** record a `judge` field.
+Nine of them name the judge model in their `source` text (for example
+`claude-opus-5-5`); the rest do not name it at all. Do not treat those
+grades as reproducible against a live provider. Re-score with `--live-judges`
 (or the UI with replay off) if you need a named model on the card.

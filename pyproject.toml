@@ -28,10 +28,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/VectorInstitute/aixeval"
-Documentation = "https://github.com/VectorInstitute/aixeval"
-Repository = "https://github.com/VectorInstitute/aixeval"
-Issues = "https://github.com/VectorInstitute/aixeval/issues"
+Homepage = "https://github.com/VectorInstitute/AIXEval"
+Documentation = "https://vectorinstitute.github.io/AIXEval/"
+Repository = "https://github.com/VectorInstitute/AIXEval"
+Issues = "https://github.com/VectorInstitute/AIXEval/issues"
 
 [project.scripts]
 aixeval = "aixeval.cli:main"

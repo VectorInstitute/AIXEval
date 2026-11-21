@@ -6,7 +6,7 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/VectorInstitute/aixeval
+      link: https://github.com/VectorInstitute/AIXEval
     - icon: fontawesome/solid/landmark
       link: https://vectorinstitute.ai
 markdown_extensions:
@@ -71,11 +71,11 @@ plugins:
             show_root_toc_entry: false
             show_symbol_type_heading: true
             show_symbol_type_toc: true
-repo_url: https://github.com/VectorInstitute/AIXEval-dev
-repo_name: VectorInstitute/AIXEval-dev
+repo_url: https://github.com/VectorInstitute/AIXEval
+repo_name: VectorInstitute/AIXEval
 site_name: AIXeval
-# Project Pages subpath (VectorInstitute/AIXEval-dev). Update when the public repo URL changes.
-site_url: https://vectorinstitute.github.io/AIXEval-dev/
+# GitHub Project Pages subpath. Must match the repo name, or nested pages lose their CSS.
+site_url: https://vectorinstitute.github.io/AIXEval/
 theme:
   custom_dir: docs/overrides
   favicon: assets/favicon-48x48.svg

@@ -4,7 +4,7 @@
 sidebar can switch provider and model for **this browser session**
 without writing `.env`.
 
-Copy [`.env.example`](https://github.com/VectorInstitute/aixeval/blob/main/.env.example).
+Copy [`.env.example`](https://github.com/VectorInstitute/AIXEval/blob/main/.env.example).
 Only the selected provider's key is required.
 
 ## Hosted APIs (data leaves your machine)

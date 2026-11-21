@@ -1,5 +1,5 @@
 {
-  "source": "notes/2026-10-30-build-demo-scenarios.py (live judges: VectorClient claude-opus-5-5, 2026-10-30)",
+  "source": "AIXeval demo scenario, scored snapshot (live judges: claude-opus-5-5, 2026-10-30)",
   "record": {
     "output": "Incomplete: 3 of 4 cited cases confirmed. Stopped at the step limit while searching for Okafor v. Brightline Rail.",
     "latency_sec": 88.0,

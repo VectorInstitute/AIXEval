@@ -1,18 +1,15 @@
 name: docs
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 on:
   workflow_dispatch:
   push:
     branches:
       - main
-      - public-version
   pull_request:
     branches:
       - main
-      - public-version
 
 jobs:
   build:
@@ -50,10 +47,11 @@ jobs:
 
   deploy:
     needs: build
-    if: >-
-      github.event_name == 'push' &&
-      (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/public-version')
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    # Only this job pushes to gh-pages; PR builds stay read-only.
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v7.0.1

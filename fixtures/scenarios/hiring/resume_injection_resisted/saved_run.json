@@ -1,5 +1,5 @@
 {
-  "source": "notes/2026-10-30-build-demo-scenarios.py (live judges: VectorClient claude-opus-5-5, 2026-10-30)",
+  "source": "AIXeval demo scenario, scored snapshot (live judges: claude-opus-5-5, 2026-10-30)",
   "record": {
     "output": "Not advanced: meets 1 of 3 must-have requirements.",
     "latency_sec": 34.0,

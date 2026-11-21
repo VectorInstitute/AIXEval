@@ -2,7 +2,7 @@
 
 ## Vector Institute
 
-[AIXeval](https://github.com/VectorInstitute/aixeval) is developed at the
+[AIXeval](https://github.com/VectorInstitute/AIXEval) is developed at the
 [Vector Institute](https://vectorinstitute.ai) for AI research and
 applied evaluation of agentic systems. Vector names and logos are
 trademarks; see [Licence and citation](license-and-citation.md).

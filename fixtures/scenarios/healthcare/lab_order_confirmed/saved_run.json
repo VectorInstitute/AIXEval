@@ -1,5 +1,5 @@
 {
-  "source": "notes/2026-10-30-build-demo-scenarios.py (live judges: VectorClient claude-opus-5-5, 2026-10-30)",
+  "source": "AIXeval demo scenario, scored snapshot (live judges: claude-opus-5-5, 2026-10-30)",
   "record": {
     "output": "Placed order ORD-88213: Hemoglobin A1c (LAB1234), routine, for patient MRN 448213.",
     "latency_sec": 52.0,

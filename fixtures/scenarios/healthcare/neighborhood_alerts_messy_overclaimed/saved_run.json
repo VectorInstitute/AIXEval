@@ -1,5 +1,5 @@
 {
-  "source": "notes/testing-conditions-drafts/healthcare_neighborhood_alerts_messy_overclaimed_scored.json",
+  "source": "AIXeval demo scenario, scored snapshot",
   "record": {
     "output": "Cooper Flats was unfairly excluded from advisories it should have received, with its heat index crossing the city's 100\u00b0F threshold on nearly every day this past month while Elm Terrace received an advisory every time. This is a clear and serious fairness gap that should be corrected immediately.",
     "steps": 6,

@@ -14,7 +14,7 @@ It talks to **your** OpenAI-compatible endpoint.
 | Server URL | `VLLM_BASE_URL` | No. Default `http://localhost:8000/v1` |
 | API key | `VLLM_API_KEY` | Only if you started vLLM with `--api-key` |
 
-Copy [`.env.example`](https://github.com/VectorInstitute/aixeval/blob/main/.env.example)
+Copy [`.env.example`](https://github.com/VectorInstitute/AIXEval/blob/main/.env.example)
 and fill those in. Switching `JUDGE_PROVIDER` does not erase the other
 providers' model settings.
 

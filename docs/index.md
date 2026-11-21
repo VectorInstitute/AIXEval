@@ -21,7 +21,7 @@ hide:
       <div class="aix-hero__cta">
         <a class="aix-btn aix-btn--primary" href="getting-started/">Get started</a>
         <a class="aix-btn aix-btn--ghost" href="metric-catalog/">Metric catalog</a>
-        <a class="aix-btn aix-btn--ghost" href="https://github.com/VectorInstitute/aixeval">GitHub</a>
+        <a class="aix-btn aix-btn--ghost" href="https://github.com/VectorInstitute/AIXEval">GitHub</a>
       </div>
       <div class="aix-hero__tags">
         <span class="aix-tag">Python &ge; 3.12</span>

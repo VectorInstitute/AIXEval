@@ -6,8 +6,8 @@
 
 Copyright © 2022–2026 Vector Institute.
 
-Full text: [`LICENSE.md`](https://github.com/VectorInstitute/aixeval/blob/main/LICENSE.md)
-in the repository. A short notice also appears in [`NOTICE`](https://github.com/VectorInstitute/aixeval/blob/main/NOTICE).
+Full text: [`LICENSE.md`](https://github.com/VectorInstitute/AIXEval/blob/main/LICENSE.md)
+in the repository. A short notice also appears in [`NOTICE`](https://github.com/VectorInstitute/AIXEval/blob/main/NOTICE).
 
 ## Trademarks
 
@@ -20,14 +20,14 @@ trademark licence to third parties.
 ## Citation
 
 If you use this software in research, please cite it. Metadata is in
-[`CITATION.cff`](https://github.com/VectorInstitute/aixeval/blob/main/CITATION.cff)
+[`CITATION.cff`](https://github.com/VectorInstitute/AIXEval/blob/main/CITATION.cff)
 on GitHub.
 
 Recommended BibTeX-style reference:
 
 ```text
 Vector Institute. (2026). AIXeval (Version 0.1.1) [Computer software].
-https://github.com/VectorInstitute/aixeval
+https://github.com/VectorInstitute/AIXEval
 ```
 
 For the eight-dimension framing and band policy used on the card, cite
