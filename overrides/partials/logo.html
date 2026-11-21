@@ -1,0 +1,14 @@
+{% if config.theme.logo %}
+<img
+  class="aix-logo aix-logo--light"
+  src="{{ config.site_url ~ 'assets/vector-logo-dark.svg' }}"
+  alt="Vector Institute"
+/>
+<img
+  class="aix-logo aix-logo--dark"
+  src="{{ config.site_url ~ 'assets/vector-logo.svg' }}"
+  alt="Vector Institute"
+/>
+{% else %}
+<span class="md-header__title">{{ config.site_name }}</span>
+{% endif %}
