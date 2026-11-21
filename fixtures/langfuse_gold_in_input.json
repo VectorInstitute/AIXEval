@@ -1,0 +1,18 @@
+{
+  "id": "gist-leak",
+  "input": {
+    "question": "Which city? Hint: Paris"
+  },
+  "output": "Paris",
+  "metadata": {
+    "expected": "Paris"
+  },
+  "observations": [
+    {
+      "id": "obs-1",
+      "type": "GENERATION",
+      "input": "Which city? Hint: Paris",
+      "output": "Paris"
+    }
+  ]
+}

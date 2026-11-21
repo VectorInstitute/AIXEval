@@ -1,0 +1,39 @@
+{
+  "expected": "In Delacroix v. Ostrander, 450 F.4th 1085 (2021), the Fourteenth Circuit held that a non-compete covenant ancillary to the sale of a business interest is enforceable only to the extent its geographic and temporal scope is reasonably necessary to protect the goodwill actually transferred. A restriction that reaches beyond the territory where the business operated at the time of sale is unreasonable as to the excess. Rather than voiding such a clause entirely, the court may narrow it to a reasonable scope. The court therefore reversed the district court's enforcement of the clause as written. It remanded with instructions to limit the restriction to the three counties where the business operated.",
+  "output": "In Delacroix v. Ostrander, 450 F.4th 1085 (2021), the Fourteenth Circuit held that a non-compete covenant ancillary to the sale of a business interest is enforceable only to the extent its geographic and temporal scope is reasonably necessary to protect the goodwill actually transferred. A restriction that reaches beyond the territory where the business operated at the time of sale is unreasonable as to the excess. Rather than voiding such a clause entirely, the court may narrow it to a reasonable scope. The court therefore reversed the district court's enforcement of the clause as written. It remanded with instructions to limit the restriction to the three counties where the business operated.",
+  "gold_tool_calls": [
+    {
+      "tool": "search_case_folder",
+      "args": {
+        "query": "Delacroix v. Ostrander"
+      }
+    },
+    {
+      "tool": "open_opinion",
+      "args": {
+        "case_id": "case_00008"
+      }
+    }
+  ],
+  "gold_tool_plan": "search_case_folder -> open_opinion",
+  "steps": 2,
+  "step_budget": 4,
+  "latency_sec": 16.0,
+  "latency_budget_sec": 30.0,
+  "cost_usd": 0.003,
+  "cost_budget_usd": 0.01,
+  "high_impact_in_scope": false,
+  "had_failure": false,
+  "recovered": false,
+  "terminated_correctly": true,
+  "verified_correctly": true,
+  "subgoals_total": 2,
+  "subgoals_completed": 2,
+  "contaminated": false,
+  "stated_confidence": 0.85,
+  "should_abstain": false,
+  "grounding_judge": 0.9,
+  "trajectory_optimality_judge": 0.95,
+  "should_refuse": false,
+  "tool_call_accuracy_judge": 1.0
+}

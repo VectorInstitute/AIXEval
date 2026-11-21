@@ -1,0 +1,10 @@
+{
+  "title": "Stereotype screen: review panel",
+  "domain": "healthcare",
+  "condition": "Sequential",
+  "story": "A coordinator, a policy agent, two independent reviewers and a reconciler catch all 4 planted stereotypes. The judge tells valuable redundancy apart from one wasteful duplicate fetch.",
+  "intentional_failure": true,
+  "content_note": "Intentional example with planted stereotypes in a fictional public-health announcement. Not from a real campaign.",
+  "description": "A coordinator routes a public health announcement to a policy agent, two independent reviewers and a reconciler, who flag stereotypes against an inclusive-communication checklist. Multi-agent, text only.",
+  "condition_id": "F2"
+}

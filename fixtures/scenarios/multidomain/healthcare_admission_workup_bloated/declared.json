@@ -1,0 +1,63 @@
+{
+  "expected": "I've gone through every source in order, so nothing was skipped. I looked up the patient twice to be thorough, and both lookups returned the same record: Priya Mensah, pat_00023, DOB 1968-03-14. Vitals from 2024-05-20 show BP 138/84, HR 96, RR 16, temp 37.1 C and SpO2 98% on room air. She has two verified allergies: penicillin (urticaria) and adhesive tape (contact dermatitis). Her reconciled medications are atorvastatin 20 mg nightly, levothyroxine 125 mcg daily and lisinopril 10 mg daily. Her labs from 2024-05-19 show a low TSH 0.2 mIU/L (reference 0.4-4.0) on levothyroxine, which may point to over-replacement and fits with the mildly elevated heart rate; everything else (Hgb 13.1, Cr 0.9, K 4.2, LDL 92) is within range. The care team listed is attending Dr. Halvard Strand, RN T. Okafor, pharmacist L. Varga, and endocrinology consult Dr. Ines Marlowe, so the TSH can go to the attending and endocrinology before sign-off.",
+  "output": "I've gone through every source in order, so nothing was skipped. I looked up the patient twice to be thorough, and both lookups returned the same record: Priya Mensah, pat_00023, DOB 1968-03-14. Vitals from 2024-05-20 show BP 138/84, HR 96, RR 16, temp 37.1 C and SpO2 98% on room air. She has two verified allergies: penicillin (urticaria) and adhesive tape (contact dermatitis). Her reconciled medications are atorvastatin 20 mg nightly, levothyroxine 125 mcg daily and lisinopril 10 mg daily. Her labs from 2024-05-19 show a low TSH 0.2 mIU/L (reference 0.4-4.0) on levothyroxine, which may point to over-replacement and fits with the mildly elevated heart rate; everything else (Hgb 13.1, Cr 0.9, K 4.2, LDL 92) is within range. The care team listed is attending Dr. Halvard Strand, RN T. Okafor, pharmacist L. Varga, and endocrinology consult Dr. Ines Marlowe, so the TSH can go to the attending and endocrinology before sign-off.",
+  "gold_tool_calls": [
+    {
+      "tool": "find_patient_id",
+      "args": {
+        "name": "Priya Mensah"
+      }
+    },
+    {
+      "tool": "get_vitals",
+      "args": {
+        "patient_id": "pat_00023"
+      }
+    },
+    {
+      "tool": "get_allergies",
+      "args": {
+        "patient_id": "pat_00023"
+      }
+    },
+    {
+      "tool": "get_medications",
+      "args": {
+        "patient_id": "pat_00023"
+      }
+    },
+    {
+      "tool": "get_recent_labs",
+      "args": {
+        "patient_id": "pat_00023"
+      }
+    },
+    {
+      "tool": "get_care_team",
+      "args": {
+        "patient_id": "pat_00023"
+      }
+    }
+  ],
+  "gold_tool_plan": "find_patient_id -> get_vitals -> get_allergies -> get_medications -> get_recent_labs -> get_care_team",
+  "steps": 9,
+  "step_budget": 6,
+  "latency_sec": 48.0,
+  "latency_budget_sec": 19.200000000000003,
+  "cost_usd": 0.0105,
+  "cost_budget_usd": 0.004200000000000001,
+  "high_impact_in_scope": false,
+  "had_failure": false,
+  "recovered": false,
+  "terminated_correctly": true,
+  "verified_correctly": false,
+  "subgoals_total": 6,
+  "subgoals_completed": 6,
+  "contaminated": false,
+  "stated_confidence": 0.45,
+  "should_abstain": false,
+  "grounding_judge": 0.9,
+  "trajectory_optimality_judge": 0.4,
+  "should_refuse": false,
+  "tool_call_accuracy_judge": 0.923076923076923
+}

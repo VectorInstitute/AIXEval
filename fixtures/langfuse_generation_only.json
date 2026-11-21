@@ -1,0 +1,24 @@
+{
+  "id": "trace-gen-only",
+  "name": "eval-run",
+  "metadata": {
+    "expected": "Paris"
+  },
+  "observations": [
+    {
+      "id": "obs-span",
+      "type": "SPAN",
+      "output": "planning"
+    },
+    {
+      "id": "obs-draft",
+      "type": "GENERATION",
+      "output": "Lyon"
+    },
+    {
+      "id": "obs-final",
+      "type": "GENERATION",
+      "output": "Paris"
+    }
+  ]
+}

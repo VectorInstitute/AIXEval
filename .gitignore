@@ -1,0 +1,64 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Lint & Test
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Agent working memory and local policy — do not publish
+.agents/memory/
+.agents/decisions/
+
+# Vscode
+.vscode
+
+# TRAIL dataset (PatronusAI/TRAIL, gated on Hugging Face) — MIT licensed but
+# its terms say not to reshare it outside a gated or private repo.
+trail_data/
+
+# macos
+*.DS_Store
+site/
+
+# Real/large trace dumps used for manual UI testing -- not sanitized
+# fixtures, don't belong in version control (see fixtures/ for the
+# synthetic ones that do).
+sample_dumps/
+fixtures/val_samples/
+fixtures/taubench_samples/
+
+# Generated run output (local harness/pipeline runs)
+runs/
+
+# Internal scored dumps and review zips — not fixtures
+/aml_eval_toolkit_scored.json
+/aml_two_phase_result.json
+/boc_eval_toolkit_scored.json
+/misalignment_vector_results.json
+/fixtures/F2_example.zip
+/docs/evaluation_work_aixpert*.pdf
+/docs/VISION.md
+/docs/PRODUCT.md
+/docs/public-release.md
+/docs/architecture/decisions/
+
+# Extra judge-vllm docs (local/cluster runbooks only; public guide is judge-vllm.md)
+/docs/judge-vllm-*.md
+!/docs/judge-vllm.md
+
+# Local bootcamp / pipeline clones (not part of the public tree)
+synthetic-data-bootcamp/

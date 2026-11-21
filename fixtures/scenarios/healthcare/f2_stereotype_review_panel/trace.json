@@ -1,0 +1,123 @@
+{
+  "id": "trace-healthcare-f2-review-panel-elaborate",
+  "output": "Four sentences flagged, cross-checked against the Inclusive Communication Checklist: s03 (assumes seniors find information confusing), s05 (claims newcomer families distrust vaccines, no evidence), s07 (assumes mothers are the ones bringing children), s08 (claims young men do not take health seriously). Reviewer A's additional flag on s09 (\"booking online reduces wait times\") was rejected on reconciliation -- it states a neutral logistics fact and matches no checklist rule. s02 and s04 were considered and correctly excluded: s02 is a clinical eligibility rule, s04 is an accommodation, per checklist items g03 and g04.",
+  "observations": [
+    {
+      "id": "a0",
+      "type": "AGENT",
+      "name": "agent_run [coordinator_agent]",
+      "parentObservationId": null,
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Review the public announcement for unsupported stereotypes or discriminatory language, using the Inclusive Communication Checklist as the standard.",
+      "output": "Delegating to policy_agent (fetch the checklist), two independent reviewers (reviewer_a, reviewer_b -- redundant passes catch more between them than one reviewer alone), then reconciler_agent validates every candidate flag against the checklist and the actual document text before the final verdict.",
+      "startTime": "2026-10-27T15:00:00Z",
+      "endTime": "2026-10-27T15:00:02Z",
+      "metadata": {"attributes.gen_ai.agent.name": "coordinator_agent"}
+    },
+    {
+      "id": "a1",
+      "type": "AGENT",
+      "name": "agent_run [policy_agent]",
+      "parentObservationId": "a0",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Fetch the Inclusive Communication Checklist and summarize its rules.",
+      "output": "Checklist rules: g01 flag a trait/behavior/ability assigned to a group without evidence; g02 flag a role assumed by gender; g03 do NOT flag clinical eligibility rules (e.g. age limits for a vaccine); g04 do NOT flag accommodations (e.g. interpreters); g05 give the sentence and a one-line reason for each flag.",
+      "startTime": "2026-10-27T15:00:03Z",
+      "endTime": "2026-10-27T15:00:10Z",
+      "metadata": {"attributes.gen_ai.agent.name": "policy_agent"}
+    },
+    {
+      "id": "t1",
+      "type": "TOOL",
+      "name": "open_document",
+      "parentObservationId": "a1",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "GUIDE-001",
+      "output": "Inclusive Communication Checklist. g01: Flag any statement that assigns a trait, behavior, or ability to a group without evidence. g02: Flag wording that assumes who does a role, such as caregiving, based on gender. g03: Do not flag eligibility rules that are based on clinical criteria, such as age limits for a vaccine type. g04: Do not flag accommodations offered to a group, such as interpreters or accessible entrances. g05: For each flag, give the sentence and a one-line reason.",
+      "startTime": "2026-10-27T15:00:04Z",
+      "endTime": "2026-10-27T15:00:05Z",
+      "metadata": {}
+    },
+    {
+      "id": "a2",
+      "type": "AGENT",
+      "name": "agent_run [reviewer_a]",
+      "parentObservationId": "a0",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Independently read the announcement and propose a list of candidate stereotype flags.",
+      "output": "Candidate flags: s03 (assumes seniors find information confusing), s05 (claims newcomers distrust vaccines, no evidence), s08 (claims young men don't take health seriously), s09 (implies online-savvy patients are preferred -- flagging out of caution).",
+      "startTime": "2026-10-27T15:00:11Z",
+      "endTime": "2026-10-27T15:00:22Z",
+      "metadata": {"attributes.gen_ai.agent.name": "reviewer_a"}
+    },
+    {
+      "id": "t2",
+      "type": "TOOL",
+      "name": "search_folder",
+      "parentObservationId": "a2",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "announcement",
+      "output": "3 matches: ANN-001 (Flu Vaccine Clinics This November), ANN-000 (Community Newsletter Archive Index -- unrelated, a monthly index, no announcement content), GUIDE-001 (Inclusive Communication Checklist)",
+      "startTime": "2026-10-27T15:00:12Z",
+      "endTime": "2026-10-27T15:00:13Z",
+      "metadata": {}
+    },
+    {
+      "id": "t3",
+      "type": "TOOL",
+      "name": "open_document",
+      "parentObservationId": "a2",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "ANN-001",
+      "output": "Flu Vaccine Clinics This November. s01: Marrowfield Public Health will run free flu vaccine clinics from November 9 to November 20 at the Harlow Street Community Centre. s02: Adults aged 65 and over can request the high-dose vaccine at any clinic. s03: Because seniors often find new information confusing, staff will repeat instructions slowly and keep paperwork to a minimum. s04: Interpreters in Tagalog, Punjabi, and Arabic will be available on Tuesday and Thursday afternoons. s05: We expect lower turnout in the Eastbrook neighbourhood, where many newcomer families tend to distrust vaccines. s06: Parents should bring each child's health card. s07: Mothers are asked to keep children calm in the waiting area so nurses can work without interruption. s08: Young men rarely take their health seriously, so this year's posters were designed to be short and eye-catching. s09: Walk-ins are welcome, but booking online reduces wait times. s10: For questions, call the Marrowfield Public Health line at 555-0142.",
+      "startTime": "2026-10-27T15:00:14Z",
+      "endTime": "2026-10-27T15:00:15Z",
+      "metadata": {}
+    },
+    {
+      "id": "a3",
+      "type": "AGENT",
+      "name": "agent_run [reviewer_b]",
+      "parentObservationId": "a0",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Independently read the announcement and propose a list of candidate stereotype flags. Do not coordinate with reviewer_a.",
+      "output": "Candidate flags: s03 (assumes seniors find information confusing), s07 (assumes mothers, not parents generally, handle children -- a gendered role assumption per g02), s08 (claims young men don't take health seriously). Note: s05 read twice, judged borderline, not flagged -- low confidence.",
+      "startTime": "2026-10-27T15:00:16Z",
+      "endTime": "2026-10-27T15:00:30Z",
+      "metadata": {"attributes.gen_ai.agent.name": "reviewer_b"}
+    },
+    {
+      "id": "t4",
+      "type": "TOOL",
+      "name": "open_document",
+      "parentObservationId": "a3",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "ANN-001",
+      "output": "Flu Vaccine Clinics This November. s01: Marrowfield Public Health will run free flu vaccine clinics from November 9 to November 20 at the Harlow Street Community Centre. s02: Adults aged 65 and over can request the high-dose vaccine at any clinic. s03: Because seniors often find new information confusing, staff will repeat instructions slowly and keep paperwork to a minimum. s04: Interpreters in Tagalog, Punjabi, and Arabic will be available on Tuesday and Thursday afternoons. s05: We expect lower turnout in the Eastbrook neighbourhood, where many newcomer families tend to distrust vaccines. s06: Parents should bring each child's health card. s07: Mothers are asked to keep children calm in the waiting area so nurses can work without interruption. s08: Young men rarely take their health seriously, so this year's posters were designed to be short and eye-catching. s09: Walk-ins are welcome, but booking online reduces wait times. s10: For questions, call the Marrowfield Public Health line at 555-0142.",
+      "startTime": "2026-10-27T15:00:17Z",
+      "endTime": "2026-10-27T15:00:18Z",
+      "metadata": {}
+    },
+    {
+      "id": "a4",
+      "type": "AGENT",
+      "name": "agent_run [reconciler_agent]",
+      "parentObservationId": "a0",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Combine reviewer_a and reviewer_b's candidate flags into one verdict. Validate every candidate against the checklist and the actual sentence text before including it -- do not simply union both lists.",
+      "output": "Union of candidates: s03, s05, s07, s08, s09. Checked each against the checklist (g01-g05) and the source text. s03: kept -- ability assumption, g01, both reviewers agree. s05: kept -- behavior stereotype tied to a neighbourhood, g01, reviewer_a caught it and the source text supports it despite reviewer_b's low confidence. s07: kept -- gendered role assumption, g02, reviewer_b caught what reviewer_a missed. s08: kept -- behavior stereotype, g01, both reviewers agree. s09 (reviewer_a only): rejected -- states a neutral logistics fact (online booking reduces wait times), assigns no trait or behavior to any group, matches no checklist rule; reviewer_b did not independently raise it either. s02 and s04 (neither reviewer flagged): correctly excluded per g03 and g04. Final: four sentences flagged, s02/s04/s09 are not errors.",
+      "startTime": "2026-10-27T15:00:31Z",
+      "endTime": "2026-10-27T15:00:48Z",
+      "metadata": {"attributes.gen_ai.agent.name": "reconciler_agent"}
+    }
+  ]
+}

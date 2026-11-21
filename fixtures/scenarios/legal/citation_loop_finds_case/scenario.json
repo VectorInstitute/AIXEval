@@ -1,0 +1,20 @@
+{
+  "title": "Citation check loop: finds the misfiled case",
+  "domain": "legal",
+  "condition": "Loop, two runs",
+  "story": "One case is filed under its full corporate name. This run notices the zero-hit search, lists the folder by surname, confirms the citation and finishes.",
+  "description": "A review lead sends the draft brief to a citation extractor, then hands the four cited cases to a folder checker that searches the matter's authorities folder. One case does not match an exact search.",
+  "metrics": [
+    "task_success",
+    "grounding",
+    "trajectory_optimality",
+    "tool_call_accuracy",
+    "sub_goal_progress",
+    "delegation_accuracy",
+    "deadlock_livelock",
+    "error_recovery",
+    "termination_correctness",
+    "step_efficiency",
+    "latency_vs_budget"
+  ]
+}

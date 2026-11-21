@@ -1,0 +1,7 @@
+{
+  "title": "Citation check: multi-agent, contained fault",
+  "domain": "legal",
+  "condition": "Sequential",
+  "story": "Two agents check a draft's citations; one real name-mismatch fault is caught and contained. Seven of eight dimensions fill in.",
+  "description": "A drafting agent writes a one-page memo citing precedent, then a citation-checker agent verifies every cited case is in the case folder. Multi-agent, text only."
+}

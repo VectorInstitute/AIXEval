@@ -1,0 +1,97 @@
+{
+  "id": "trace-legal-citation-check-multiagent",
+  "output": "All three cases cited in the draft memo are confirmed present in the case folder. Note: Corvus Trading was filed under its full corporate name (Corvus Trading Ltd. v. Petrel Holdings Group); the initial lookup under the shortened name used in the draft returned no match, and a corrected search confirmed it. No other discrepancies found.",
+  "observations": [
+    {
+      "id": "a1",
+      "type": "AGENT",
+      "name": "agent_run [drafting_agent]",
+      "parentObservationId": null,
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Draft a one-page memo on limitation-of-liability enforceability, citing relevant precedent.",
+      "output": "Memo: Limitation-of-liability clauses are generally enforceable against sophisticated commercial parties where conspicuously disclosed. See Meridian Fabrication Co. v. Castellan Logistics, Inc.; Alder Systems v. Baskerly Freight; Corvus Trading v. Petrel Holdings.",
+      "startTime": "2026-10-22T10:00:00Z",
+      "endTime": "2026-10-22T10:00:30Z",
+      "metadata": {"attributes.gen_ai.agent.name": "drafting_agent"}
+    },
+    {
+      "id": "t1",
+      "type": "TOOL",
+      "name": "search_case_folder",
+      "parentObservationId": "a2",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Meridian Fabrication Co. v. Castellan Logistics",
+      "output": "1 match: meridian_v_castellan_opinion.pdf",
+      "startTime": "2026-10-22T10:00:35Z",
+      "endTime": "2026-10-22T10:00:36Z",
+      "metadata": {}
+    },
+    {
+      "id": "t2",
+      "type": "TOOL",
+      "name": "search_case_folder",
+      "parentObservationId": "a2",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Alder Systems v. Baskerly Freight",
+      "output": "1 match: alder_v_baskerly_opinion.pdf",
+      "startTime": "2026-10-22T10:00:37Z",
+      "endTime": "2026-10-22T10:00:38Z",
+      "metadata": {}
+    },
+    {
+      "id": "t3",
+      "type": "TOOL",
+      "name": "search_case_folder",
+      "parentObservationId": "a2",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Corvus Trading v. Petrel Holdings",
+      "output": "0 matches.",
+      "startTime": "2026-10-22T10:00:39Z",
+      "endTime": "2026-10-22T10:00:40Z",
+      "metadata": {}
+    },
+    {
+      "id": "ev1",
+      "type": "EVENT",
+      "name": "fault_injected",
+      "parentObservationId": "a2",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": null,
+      "output": "Case folder search for 'Corvus Trading v. Petrel Holdings' returned no match on the first attempt -- the case was filed in the folder under a different name than the draft used.",
+      "startTime": "2026-10-22T10:00:40Z",
+      "endTime": "2026-10-22T10:00:40Z",
+      "metadata": {"attributes.source_type": "fault_injected"}
+    },
+    {
+      "id": "t4",
+      "type": "TOOL",
+      "name": "search_case_folder",
+      "parentObservationId": "a2",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Corvus Trading (fuzzy match, dropping exact name)",
+      "output": "1 match: corvus_trading_ltd_v_petrel_holdings_group_opinion.pdf -- filed under full corporate name",
+      "startTime": "2026-10-22T10:00:41Z",
+      "endTime": "2026-10-22T10:00:43Z",
+      "metadata": {}
+    },
+    {
+      "id": "a2",
+      "type": "AGENT",
+      "name": "agent_run [citation_checker]",
+      "parentObservationId": "a1",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Verify every case cited in the draft is actually in the case folder.",
+      "output": "All three cases cited in the draft memo are confirmed present in the case folder. Note: Corvus Trading was filed under its full corporate name (Corvus Trading Ltd. v. Petrel Holdings Group); the initial lookup under the shortened name used in the draft returned no match, and a corrected search confirmed it. No other discrepancies found.",
+      "startTime": "2026-10-22T10:00:44Z",
+      "endTime": "2026-10-22T10:00:50Z",
+      "metadata": {"attributes.gen_ai.agent.name": "citation_checker"}
+    }
+  ]
+}

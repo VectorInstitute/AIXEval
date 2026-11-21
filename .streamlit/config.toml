@@ -1,0 +1,37 @@
+# AIXeval Streamlit theme: Vector Institute brand tokens
+# (vector-brand skill, brand.json). Read from the working directory, so run
+# `streamlit run` from the repo root.
+
+[theme]
+base = "light"
+primaryColor = "#EB088A"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F5F5F5"
+textColor = "#222222"
+linkColor = "#C40072"
+borderColor = "#EDEDED"
+redColor = "#E8553A"
+orangeColor = "#FF9E00"
+greenColor = "#1DB47F"
+blueColor = "#313CFF"
+violetColor = "#8A25C9"
+grayColor = "#666666"
+font = "'Open Sans':https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap, sans-serif"
+headingFont = "Montserrat:https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap, sans-serif"
+baseRadius = "medium"
+
+[theme.sidebar]
+backgroundColor = "#F5F5F5"
+
+[client]
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false
+
+[server]
+# Listen on this machine only. Streamlit's default is every interface, which
+# lets anyone who can reach the port upload traces and run judge calls on
+# your API keys. To expose the UI deliberately, override with
+# `streamlit run ... --server.address 0.0.0.0` behind your own auth.
+address = "localhost"

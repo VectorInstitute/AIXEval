@@ -1,0 +1,8 @@
+{
+  "title": "Case holding: sequential (baseline)",
+  "domain": "legal",
+  "condition": "Sequential",
+  "story": "Clean single-agent baseline: identify a case's holding. Capability 4/4.",
+  "description": "A single legal research agent reads a case and states its holding. Text only.",
+  "condition_id": "L1"
+}

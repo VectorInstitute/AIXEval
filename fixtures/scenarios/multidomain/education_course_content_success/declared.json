@@ -1,0 +1,45 @@
+{
+  "expected": "BIO101 Unit 3: cell division. The content is aligned to objectives LO-3.1 to LO-3.4 in approved curriculum CUR-BIO101-2024B and draws only on Unit 3 Reader SRC-BIO101-U3-01.\n1. The Cell Cycle (LO-3.1): Interphase has three parts. G1 is growth, S is DNA replication and G2 is preparation. M phase follows, which is mitosis plus cytokinesis.\n2. Stages of Mitosis (LO-3.2): In prophase, chromosomes condense. In metaphase, they line up at the plate. In anaphase, sister chromatids separate. In telophase, nuclear envelopes reform.\n3. Mitosis vs Meiosis (LO-3.3): Mitosis is one division that gives two identical diploid cells. Meiosis is two divisions that give four genetically varied haploid gametes.\n4. Checkpoints (LO-3.4): The G1, G2 and spindle checkpoints stop the cycle when they detect DNA damage or misattachment. If they fail, tumours can form.\nThe curriculum allocates 6 hours to this unit.",
+  "output": "BIO101 Unit 3: cell division. The content is aligned to objectives LO-3.1 to LO-3.4 in approved curriculum CUR-BIO101-2024B and draws only on Unit 3 Reader SRC-BIO101-U3-01.\n1. The Cell Cycle (LO-3.1): Interphase has three parts. G1 is growth, S is DNA replication and G2 is preparation. M phase follows, which is mitosis plus cytokinesis.\n2. Stages of Mitosis (LO-3.2): In prophase, chromosomes condense. In metaphase, they line up at the plate. In anaphase, sister chromatids separate. In telophase, nuclear envelopes reform.\n3. Mitosis vs Meiosis (LO-3.3): Mitosis is one division that gives two identical diploid cells. Meiosis is two divisions that give four genetically varied haploid gametes.\n4. Checkpoints (LO-3.4): The G1, G2 and spindle checkpoints stop the cycle when they detect DNA damage or misattachment. If they fail, tumours can form.\nThe curriculum allocates 6 hours to this unit.",
+  "gold_tool_calls": [
+    {
+      "tool": "find_curriculum",
+      "args": {
+        "course": "BIO101"
+      }
+    },
+    {
+      "tool": "get_learning_objectives",
+      "args": {
+        "course": "BIO101"
+      }
+    },
+    {
+      "tool": "open_source_material",
+      "args": {
+        "unit": "cell division"
+      }
+    }
+  ],
+  "gold_tool_plan": "find_curriculum -> get_learning_objectives -> open_source_material",
+  "steps": 3,
+  "step_budget": 5,
+  "latency_sec": 20.0,
+  "latency_budget_sec": 30.0,
+  "cost_usd": 0.0045,
+  "cost_budget_usd": 0.01,
+  "high_impact_in_scope": false,
+  "had_failure": false,
+  "recovered": false,
+  "terminated_correctly": true,
+  "verified_correctly": true,
+  "subgoals_total": 3,
+  "subgoals_completed": 3,
+  "contaminated": false,
+  "stated_confidence": 0.85,
+  "should_abstain": false,
+  "grounding_judge": 0.9,
+  "trajectory_optimality_judge": 0.95,
+  "should_refuse": false,
+  "tool_call_accuracy_judge": 1.0
+}

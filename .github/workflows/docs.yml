@@ -1,0 +1,79 @@
+name: docs
+permissions:
+  contents: write
+  pull-requests: write
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - public-version
+  pull_request:
+    branches:
+      - main
+      - public-version
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7.0.1
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v9.0.0
+        with:
+          version: "0.9.11"
+          enable-cache: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version-file: ".python-version"
+
+      - name: Install the project
+        run: uv sync --all-extras --group docs
+
+      - name: Build docs
+        run: uv run mkdocs build
+
+      - name: Create .nojekyll file
+        run: touch site/.nojekyll
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: docs-site
+          path: site/
+          retention-days: 1
+
+  deploy:
+    needs: build
+    if: >-
+      github.event_name == 'push' &&
+      (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/public-version')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7.0.1
+
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+      - name: Download artifact
+        uses: actions/download-artifact@v8
+        with:
+          name: docs-site
+          path: site
+
+      - name: Ensure .nojekyll exists
+        run: touch site/.nojekyll
+
+      - name: Deploy to Github pages
+        uses: JamesIves/github-pages-deploy-action@v4.9.0
+        with:
+          branch: gh-pages
+          folder: site

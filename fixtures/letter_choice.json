@@ -1,0 +1,8 @@
+{
+  "expected": "Paris",
+  "output": "A",
+  "choices": {
+    "A": "Paris",
+    "B": "Lyon"
+  }
+}

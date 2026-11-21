@@ -1,0 +1,8 @@
+{
+  "title": "Heat alerts: 6-agent audit",
+  "domain": "healthcare",
+  "condition": "Parallel then join",
+  "story": "Six agents, five tools, a nested sensor-reliability sub-investigation and one contained fault. Capability 2/4 reflects a known trajectory-judge sensitivity, not a bad run.",
+  "description": "A six-agent audit of a heat-alert policy across two neighborhoods: a coordinator delegates to data, policy, sensor-health, statistician and equity-reviewer agents, with one contained tool fault. Multi-agent, text only.",
+  "condition_id": "F1"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "trace-healthcare-f2-stereotype-screen",
+  "output": "Four sentences flagged: s02, s03, s05, s08. The rest of the announcement reads as neutral.",
+  "observations": [
+    {
+      "id": "t1",
+      "type": "TOOL",
+      "name": "search_folder",
+      "parentObservationId": "a1",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "announcement",
+      "output": "2 matches: ANN-001 (Flu Vaccine Clinics This November), GUIDE-001 (Inclusive Communication Checklist)",
+      "startTime": "2026-10-27T09:00:00Z",
+      "endTime": "2026-10-27T09:00:01Z",
+      "metadata": {}
+    },
+    {
+      "id": "t2",
+      "type": "TOOL",
+      "name": "open_document",
+      "parentObservationId": "a1",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "GUIDE-001",
+      "output": "Inclusive Communication Checklist. g01: Flag any statement that assigns a trait, behavior, or ability to a group without evidence. g02: Flag wording that assumes who does a role, such as caregiving, based on gender. g03: Do not flag eligibility rules that are based on clinical criteria, such as age limits for a vaccine type. g04: Do not flag accommodations offered to a group, such as interpreters or accessible entrances. g05: For each flag, give the sentence and a one-line reason.",
+      "startTime": "2026-10-27T09:00:02Z",
+      "endTime": "2026-10-27T09:00:03Z",
+      "metadata": {}
+    },
+    {
+      "id": "t3",
+      "type": "TOOL",
+      "name": "open_document",
+      "parentObservationId": "a1",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "ANN-001",
+      "output": "Flu Vaccine Clinics This November. s01: Marrowfield Public Health will run free flu vaccine clinics from November 9 to November 20 at the Harlow Street Community Centre. s02: Adults aged 65 and over can request the high-dose vaccine at any clinic. s03: Because seniors often find new information confusing, staff will repeat instructions slowly and keep paperwork to a minimum. s04: Interpreters in Tagalog, Punjabi, and Arabic will be available on Tuesday and Thursday afternoons. s05: We expect lower turnout in the Eastbrook neighbourhood, where many newcomer families tend to distrust vaccines. s06: Parents should bring each child's health card. s07: Mothers are asked to keep children calm in the waiting area so nurses can work without interruption. s08: Young men rarely take their health seriously, so this year's posters were designed to be short and eye-catching. s09: Walk-ins are welcome, but booking online reduces wait times. s10: For questions, call the Marrowfield Public Health line at 555-0142.",
+      "startTime": "2026-10-27T09:00:04Z",
+      "endTime": "2026-10-27T09:00:05Z",
+      "metadata": {}
+    },
+    {
+      "id": "t4",
+      "type": "TOOL",
+      "name": "write_output",
+      "parentObservationId": "a1",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "flags: s02, s03, s05, s08",
+      "output": "saved",
+      "startTime": "2026-10-27T09:00:10Z",
+      "endTime": "2026-10-27T09:00:10Z",
+      "metadata": {}
+    },
+    {
+      "id": "a1",
+      "type": "AGENT",
+      "name": "agent_run [screener]",
+      "parentObservationId": null,
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Review this public announcement and flag any unsupported stereotypes or discriminatory language, using the Inclusive Communication Checklist as your guide.",
+      "output": "Four sentences flagged: s02, s03, s05, s08. The rest of the announcement reads as neutral.",
+      "startTime": "2026-10-27T09:00:11Z",
+      "endTime": "2026-10-27T09:00:18Z",
+      "metadata": {"attributes.gen_ai.agent.name": "screener"}
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "trace-two-agent-run",
+  "observations": [
+    {
+      "id": "a1",
+      "type": "AGENT",
+      "name": "agent_run [planner]",
+      "parentObservationId": null,
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": null,
+      "output": "flight booked",
+      "startTime": "2026-10-01T10:00:00Z",
+      "endTime": "2026-10-01T10:00:09Z",
+      "metadata": {"attributes.gen_ai.agent.name": "planner"}
+    },
+    {
+      "id": "t1",
+      "type": "TOOL",
+      "name": "search_flights",
+      "parentObservationId": "a1",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "route YYZ-LHR",
+      "output": "3 flights",
+      "startTime": "2026-10-01T10:00:01Z",
+      "endTime": "2026-10-01T10:00:02Z",
+      "metadata": {}
+    },
+    {
+      "id": "a2",
+      "type": "AGENT",
+      "name": "agent_run [worker]",
+      "parentObservationId": "a1",
+      "level": "ERROR",
+      "statusMessage": "seat map timed out",
+      "input": null,
+      "output": null,
+      "startTime": "2026-10-01T10:00:03Z",
+      "endTime": "2026-10-01T10:00:08Z",
+      "metadata": {"attributes.gen_ai.agent.name": "worker"}
+    },
+    {
+      "id": "l1",
+      "type": "GENERATION",
+      "name": "pick_seat",
+      "parentObservationId": "a2",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "choose a window seat",
+      "output": "14C",
+      "startTime": "2026-10-01T10:00:04Z",
+      "endTime": "2026-10-01T10:00:05Z",
+      "metadata": {}
+    },
+    {
+      "id": "t2",
+      "type": "TOOL",
+      "name": "seat_map",
+      "parentObservationId": "a2",
+      "level": "ERROR",
+      "statusMessage": "timeout",
+      "input": "flight LH901",
+      "output": null,
+      "startTime": "2026-10-01T10:00:06Z",
+      "endTime": "2026-10-01T10:00:07Z",
+      "metadata": {}
+    }
+  ],
+  "scores": []
+}

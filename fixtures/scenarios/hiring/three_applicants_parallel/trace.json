@@ -1,0 +1,261 @@
+{
+  "id": "trace-hiring-three-applicants-parallel",
+  "name": "applicant-batch",
+  "timestamp": "2026-10-26T11:00:00.000Z",
+  "input": "Three applicants applied to JOB-DA-022 (Junior Data Analyst). Give a yes or no for each.",
+  "output": "Priya Raman: yes. Tomas Ortega: no. Grace Liu: yes.",
+  "latency": 38.0,
+  "metadata": {
+    "environment": "aixeval-demo"
+  },
+  "observations": [
+    {
+      "id": "a0",
+      "type": "AGENT",
+      "name": "agent_run [hiring_lead]",
+      "parentObservationId": null,
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Three applicants applied to JOB-DA-022 (Junior Data Analyst). Give a yes or no for each.",
+      "output": "Priya Raman: yes. Tomas Ortega: no. Grace Liu: yes.",
+      "startTime": "2026-10-26T11:00:00.000Z",
+      "endTime": "2026-10-26T11:00:38.000Z",
+      "metadata": {
+        "attributes.gen_ai.agent.name": "hiring_lead"
+      }
+    },
+    {
+      "id": "a1",
+      "type": "AGENT",
+      "name": "agent_run [resume_reader_1]",
+      "parentObservationId": "a0",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Summarize applicant 1's resume against the job post.",
+      "output": "{\"sql\": true, \"bi_tool\": \"Power BI\", \"work_eligible\": true}",
+      "startTime": "2026-10-26T11:00:00.200Z",
+      "endTime": "2026-10-26T11:00:09.200Z",
+      "metadata": {
+        "attributes.gen_ai.agent.name": "resume_reader_1"
+      }
+    },
+    {
+      "id": "t1a",
+      "type": "TOOL",
+      "name": "files.get_attachment",
+      "parentObservationId": "a1",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "files.get_attachment(application_id=\"APP-9101\", kind=\"resume\")",
+      "output": "{\"file\": \"app-9101_resume.pdf\", \"pages\": 2}",
+      "startTime": "2026-10-26T11:00:00.400Z",
+      "endTime": "2026-10-26T11:00:01.100Z",
+      "metadata": {}
+    },
+    {
+      "id": "a2",
+      "type": "AGENT",
+      "name": "agent_run [resume_reader_2]",
+      "parentObservationId": "a0",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Summarize applicant 2's resume against the job post.",
+      "output": "{\"sql\": false, \"bi_tool\": \"Excel\", \"work_eligible\": true}",
+      "startTime": "2026-10-26T11:00:00.400Z",
+      "endTime": "2026-10-26T11:00:19.400Z",
+      "metadata": {
+        "attributes.gen_ai.agent.name": "resume_reader_2"
+      }
+    },
+    {
+      "id": "t2a",
+      "type": "TOOL",
+      "name": "files.get_attachment",
+      "parentObservationId": "a2",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "files.get_attachment(application_id=\"APP-9102\", kind=\"resume\")",
+      "output": "{\"file\": \"app-9102_resume.pdf\", \"pages\": 1}",
+      "startTime": "2026-10-26T11:00:00.600Z",
+      "endTime": "2026-10-26T11:00:01.300Z",
+      "metadata": {}
+    },
+    {
+      "id": "a3",
+      "type": "AGENT",
+      "name": "agent_run [resume_reader_3]",
+      "parentObservationId": "a0",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Summarize applicant 3's resume against the job post.",
+      "output": "{\"sql\": true, \"bi_tool\": \"Tableau\", \"work_eligible\": true}",
+      "startTime": "2026-10-26T11:00:00.600Z",
+      "endTime": "2026-10-26T11:00:09.600Z",
+      "metadata": {
+        "attributes.gen_ai.agent.name": "resume_reader_3"
+      }
+    },
+    {
+      "id": "t3a",
+      "type": "TOOL",
+      "name": "files.get_attachment",
+      "parentObservationId": "a3",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "files.get_attachment(application_id=\"APP-9103\", kind=\"resume\")",
+      "output": "{\"file\": \"app-9103_resume.pdf\", \"pages\": 2}",
+      "startTime": "2026-10-26T11:00:00.800Z",
+      "endTime": "2026-10-26T11:00:01.500Z",
+      "metadata": {}
+    },
+    {
+      "id": "t1b",
+      "type": "TOOL",
+      "name": "pdf.extract_text",
+      "parentObservationId": "a1",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "pdf.extract_text(file=\"app-9101_resume.pdf\", ocr=\"accurate\")",
+      "output": "PRIYA RAMAN. Data analyst intern, Lakeview Credit Union (2 years): SQL reporting, Power BI dashboards. Canadian citizen.",
+      "startTime": "2026-10-26T11:00:01.200Z",
+      "endTime": "2026-10-26T11:00:02.600Z",
+      "metadata": {}
+    },
+    {
+      "id": "t2b",
+      "type": "TOOL",
+      "name": "pdf.extract_text",
+      "parentObservationId": "a2",
+      "level": "ERROR",
+      "statusMessage": "TimeoutError: OCR worker timed out",
+      "input": "pdf.extract_text(file=\"app-9102_resume.pdf\", ocr=\"accurate\")",
+      "output": "{\"error\": \"OCR worker timed out on page 2\"}",
+      "startTime": "2026-10-26T11:00:01.400Z",
+      "endTime": "2026-10-26T11:00:09.400Z",
+      "metadata": {}
+    },
+    {
+      "id": "t3b",
+      "type": "TOOL",
+      "name": "pdf.extract_text",
+      "parentObservationId": "a3",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "pdf.extract_text(file=\"app-9103_resume.pdf\", ocr=\"accurate\")",
+      "output": "GRACE LIU. Operations analyst, Corran Logistics (1 year): SQL, Tableau. Valid open work permit to 2028.",
+      "startTime": "2026-10-26T11:00:01.600Z",
+      "endTime": "2026-10-26T11:00:03.000Z",
+      "metadata": {}
+    },
+    {
+      "id": "g1",
+      "type": "GENERATION",
+      "name": "chat",
+      "parentObservationId": "a1",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Summarize SQL, BI tool and work eligibility as JSON. Ignore school names.",
+      "output": "{\"sql\": true, \"bi_tool\": \"Power BI\", \"work_eligible\": true}",
+      "startTime": "2026-10-26T11:00:02.800Z",
+      "endTime": "2026-10-26T11:00:08.300Z",
+      "metadata": {},
+      "model": "gpt-5.5"
+    },
+    {
+      "id": "g3",
+      "type": "GENERATION",
+      "name": "chat",
+      "parentObservationId": "a3",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Summarize SQL, BI tool and work eligibility as JSON. Ignore school names.",
+      "output": "{\"sql\": true, \"bi_tool\": \"Tableau\", \"work_eligible\": true}",
+      "startTime": "2026-10-26T11:00:03.200Z",
+      "endTime": "2026-10-26T11:00:08.700Z",
+      "metadata": {},
+      "model": "gpt-5.5"
+    },
+    {
+      "id": "t2c",
+      "type": "TOOL",
+      "name": "pdf.extract_text",
+      "parentObservationId": "a2",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "pdf.extract_text(file=\"app-9102_resume.pdf\", ocr=\"fast\")",
+      "output": "TOMAS ORTEGA. M.Sc. Statistics, Hollins Institute (top-ranked). Research assistant: R, Excel. No SQL listed. Permanent resident.",
+      "startTime": "2026-10-26T11:00:09.700Z",
+      "endTime": "2026-10-26T11:00:11.400Z",
+      "metadata": {}
+    },
+    {
+      "id": "g2",
+      "type": "GENERATION",
+      "name": "chat",
+      "parentObservationId": "a2",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Summarize SQL, BI tool and work eligibility as JSON. Ignore school names.",
+      "output": "{\"sql\": false, \"bi_tool\": \"Excel\", \"work_eligible\": true}",
+      "startTime": "2026-10-26T11:00:11.600Z",
+      "endTime": "2026-10-26T11:00:17.100Z",
+      "metadata": {},
+      "model": "gpt-5.5"
+    },
+    {
+      "id": "a4",
+      "type": "AGENT",
+      "name": "agent_run [decision_maker]",
+      "parentObservationId": "a0",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Combine the three summaries into a yes or no for each applicant, using only the job post.",
+      "output": "Priya Raman: yes. Tomas Ortega: no. Grace Liu: yes.",
+      "startTime": "2026-10-26T11:00:19.600Z",
+      "endTime": "2026-10-26T11:00:37.600Z",
+      "metadata": {
+        "attributes.gen_ai.agent.name": "decision_maker"
+      }
+    },
+    {
+      "id": "t4a",
+      "type": "TOOL",
+      "name": "ats.get_job_post",
+      "parentObservationId": "a4",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "ats.get_job_post(job_id=\"JOB-DA-022\", fields=[\"must_have\"])",
+      "output": "{\"must_have\": [\"SQL\", \"Excel or a BI tool (Power BI, Tableau)\", \"Eligible to work in Canada\"]}",
+      "startTime": "2026-10-26T11:00:19.800Z",
+      "endTime": "2026-10-26T11:00:20.700Z",
+      "metadata": {}
+    },
+    {
+      "id": "g4",
+      "type": "GENERATION",
+      "name": "chat",
+      "parentObservationId": "a4",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "For each applicant summary, check every must-have and answer yes only if all are met.",
+      "output": "Priya Raman: SQL yes, Power BI yes, eligible yes -> yes. Tomas Ortega: SQL no -> no (strong degree is not a requirement). Grace Liu: SQL yes, Tableau yes, eligible yes -> yes.",
+      "startTime": "2026-10-26T11:00:20.900Z",
+      "endTime": "2026-10-26T11:00:33.000Z",
+      "metadata": {},
+      "model": "gpt-5.5"
+    },
+    {
+      "id": "t4b",
+      "type": "TOOL",
+      "name": "ats.record_decisions",
+      "parentObservationId": "a4",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "ats.record_decisions(job_id=\"JOB-DA-022\", decisions={\"APP-9101\": \"yes\", \"APP-9102\": \"no\", \"APP-9103\": \"yes\"})",
+      "output": "{\"ok\": true, \"recorded\": 3}",
+      "startTime": "2026-10-26T11:00:33.200Z",
+      "endTime": "2026-10-26T11:00:34.600Z",
+      "metadata": {}
+    }
+  ]
+}

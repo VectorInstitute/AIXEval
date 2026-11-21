@@ -1,0 +1,99 @@
+{
+  "task_id": "hiring_three_applicants_anxious",
+  "reward": null,
+  "info": {
+    "source": "llm-authored demo",
+    "variant": "success",
+    "task_type": "three_applicants",
+    "personality_style": "anxious",
+    "author_model": "claude-opus-5-5",
+    "prompt_version": "synth-author-v2"
+  },
+  "traj": [
+    {
+      "role": "user",
+      "content": "Hi, sorry, I'm a bit nervous about this one. I really don't want us to get it wrong. Could you please tell me which of the three applicants for job_00012 actually meet the posted requirements? I just need a clear yes or no for each, based only on what the job post asks for."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_1",
+          "type": "function",
+          "function": {
+            "name": "get_job_post",
+            "arguments": "{\"job_id\": \"job_00012\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_1",
+      "content": "{\"job_id\": \"job_00012\", \"title\": \"Warehouse Operations Supervisor\", \"department\": \"Distribution\", \"location\": \"Eastbrook Distribution Center\", \"posted_date\": \"2024-05-02\", \"status\": \"open\", \"required_qualifications\": [\"Minimum 4 years of warehouse or distribution center experience\", \"Minimum 2 years in a supervisory role directly managing staff\", \"Current forklift operator certification (must be valid on start date)\", \"Available to work rotating shifts, including weekends\"], \"preferred_qualifications\": [\"Experience with warehouse management software\", \"Associate degree or higher in logistics or business\"], \"target_start_date\": \"2024-06-17\", \"applications\": [\"app_00012_1\", \"app_00012_2\", \"app_00012_3\"]}"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_2",
+          "type": "function",
+          "function": {
+            "name": "get_resume",
+            "arguments": "{\"application_id\": \"app_00012_1\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_2",
+      "content": "{\"application_id\": \"app_00012_1\", \"job_id\": \"job_00012\", \"candidate_name\": \"Mateo Ortiz\", \"submitted\": \"2024-05-06\", \"experience\": [{\"employer\": \"Harlow Freight Services\", \"title\": \"Shift Supervisor, Inbound\", \"start\": \"2021-03\", \"end\": \"present\", \"notes\": \"Supervises team of 14 receiving associates\"}, {\"employer\": \"Pinecrest Supply Co.\", \"title\": \"Warehouse Associate\", \"start\": \"2018-01\", \"end\": \"2021-02\"}], \"total_warehouse_years\": 6.3, \"supervisory_years\": 3.2, \"certifications\": [{\"name\": \"Forklift Operator Certification\", \"issued\": \"2023-08-14\", \"expires\": \"2026-08-14\"}], \"shift_availability\": \"Rotating shifts and weekends: yes\", \"education\": \"High school diploma, Millbrook Secondary School\"}"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_3",
+          "type": "function",
+          "function": {
+            "name": "get_resume",
+            "arguments": "{\"application_id\": \"app_00012_2\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_3",
+      "content": "{\"application_id\": \"app_00012_2\", \"job_id\": \"job_00012\", \"candidate_name\": \"Omar Silva\", \"submitted\": \"2024-05-08\", \"experience\": [{\"employer\": \"Kestrel Logistics\", \"title\": \"Team Lead, Outbound\", \"start\": \"2023-04\", \"end\": \"present\", \"notes\": \"Leads team of 6 pickers\"}, {\"employer\": \"Kestrel Logistics\", \"title\": \"Warehouse Associate\", \"start\": \"2019-02\", \"end\": \"2023-03\"}], \"total_warehouse_years\": 5.2, \"supervisory_years\": 1.1, \"certifications\": [{\"name\": \"Forklift Operator Certification\", \"issued\": \"2022-11-03\", \"expires\": \"2025-11-03\"}], \"shift_availability\": \"Rotating shifts and weekends: yes\", \"education\": \"Associate degree in Logistics, Valley Ridge Community College\"}"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_4",
+          "type": "function",
+          "function": {
+            "name": "get_resume",
+            "arguments": "{\"application_id\": \"app_00012_3\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_4",
+      "content": "{\"application_id\": \"app_00012_3\", \"job_id\": \"job_00012\", \"candidate_name\": \"Priya Kim\", \"submitted\": \"2024-05-09\", \"experience\": [{\"employer\": \"Northgate Storage Partners\", \"title\": \"Inventory Supervisor\", \"start\": \"2022-04\", \"end\": \"present\", \"notes\": \"Manages team of 9 inventory clerks\"}, {\"employer\": \"Northgate Storage Partners\", \"title\": \"Inventory Clerk\", \"start\": \"2020-04\", \"end\": \"2022-03\"}], \"total_warehouse_years\": 4.1, \"supervisory_years\": 2.1, \"certifications\": [{\"name\": \"Forklift Operator Certification\", \"issued\": \"2024-01-22\", \"expires\": \"2027-01-22\"}], \"shift_availability\": \"Rotating shifts and weekends: yes\", \"education\": \"Bachelor's degree in Business Administration, Larkfield University\"}"
+    },
+    {
+      "role": "assistant",
+      "content": "Against the four required qualifications in job_00012 (4+ years warehouse experience, 2+ years supervising staff, a forklift certification valid on the 2024-06-17 start date, and availability for rotating shifts including weekends), here is the result. Mateo Ortiz: yes. He has 6.3 years in warehouses, 3.2 years supervising, a certification valid until 2026-08-14, and confirmed shift availability. Omar Silva: no. He meets the experience, certification and shift requirements, but he has only 1.1 years in a supervisory role, short of the required 2 years. Priya Kim: yes. She has 4.1 years of experience, 2.1 years supervising, a certification valid until 2027-01-22, and confirmed shift availability. I didn't weigh the preferred qualifications, since they aren't requirements."
+    }
+  ],
+  "trial": 0
+}

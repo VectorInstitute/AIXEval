@@ -1,0 +1,12 @@
+{
+  "expected": "The outlets disagree on two points: the budget ($4.1M in the Harbour Ledger vs $3.8M in the Valley Courier) and the construction start (spring 2027 vs fall 2027). Both report a 7-2 vote with the mayor in favour.",
+  "had_failure": true,
+  "recovered": true,
+  "subgoals_total": 3,
+  "subgoals_completed": 3,
+  "terminated_correctly": true,
+  "verified_correctly": false,
+  "step_budget": 14,
+  "latency_budget_sec": 60.0,
+  "gold_tool_plan": "two outlet readers in parallel (news.fetch_article -> extract claims) -> compare claim lists -> verify every disagreement against both lists -> cms.create_draft"
+}

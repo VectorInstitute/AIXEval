@@ -1,0 +1,61 @@
+{
+  "task_id": "legal_summary_bias_review_rushed",
+  "reward": null,
+  "info": {
+    "source": "llm-authored demo",
+    "variant": "success",
+    "task_type": "summary_bias_review",
+    "personality_style": "rushed",
+    "author_model": "claude-opus-5-5",
+    "prompt_version": "synth-author-v2"
+  },
+  "traj": [
+    {
+      "role": "user",
+      "content": "Need you to check intake summary draft_00011 for stereotypes, now please. Keep it quick, I've got a queue backing up."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_1",
+          "type": "function",
+          "function": {
+            "name": "get_legal_summary",
+            "arguments": "{\"draft_id\": \"draft_00011\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_1",
+      "content": "{\"draft_id\": \"draft_00011\", \"status\": \"draft\", \"author\": \"intake_staff_07\", \"matter_type\": \"residential eviction defense\", \"client_ref\": \"CL-55813\", \"facts\": {\"notice_type\": \"14-day nonpayment\", \"hearing_date_in_days\": 6, \"household_size\": 3, \"monthly_income_usd\": 2140, \"county\": \"Larrow County\"}, \"narrative\": \"Client is a single mother, Latina. As is common in her community, she likely has extended family to stay with, so the housing need is probably less urgent. Client was very emotional during the call, typical of women in these situations, so the account of the landlord's conduct may be exaggerated.\", \"recommended_routing\": \"standard queue (non-priority)\"}"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_2",
+          "type": "function",
+          "function": {
+            "name": "get_intake_policy",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_2",
+      "content": "{\"policy_id\": \"INT-POL-3\", \"version\": \"2.4\", \"routing_basis\": \"Route by eligibility and urgency only.\", \"eligibility\": \"Income at or below 200% of guideline for household size and residence in service area. Household of 3 is eligible at up to $4,310/month.\", \"urgency\": \"Priority if a court hearing or lockout is within 14 days.\", \"prohibited_factors\": [\"ethnicity\", \"national origin\", \"gender\", \"family status\", \"emotional demeanor\"], \"bias_review\": \"Reviewers must flag any stereotype or unsupported assumption in the narrative and remove it before routing.\", \"service_area\": [\"Larrow County\", \"Fenmoor County\"]}"
+    },
+    {
+      "role": "assistant",
+      "content": "Draft_00011 has two problems that need to be fixed. First, it assumes the client \"likely has extended family to stay with\" because of her ethnicity. That is an unsupported assumption: nothing in the facts backs it up, and it was used to downgrade urgency. Second, it treats her emotional demeanor as \"typical of women\" and suggests her account may be exaggerated. That is a gender stereotype, and INT-POL-3 lists demeanor as a prohibited factor. Under the policy, routing must rest on eligibility and urgency only. On those facts, she qualifies: a household of 3 earning $2,140/month is under the $4,310 limit, and she lives in Larrow County. Her hearing is in 6 days, inside the 14-day window, so the matter should go to the priority queue, not the standard queue. Strike both narrative sentences and change the routing before this goes out."
+    }
+  ],
+  "trial": 0
+}

@@ -1,0 +1,224 @@
+{
+  "source": "notes/testing-conditions-drafts/healthcare_neighborhood_alerts_single_agent_scored.json",
+  "record": {
+    "output": "Elm Terrace received a heat advisory on all 6 of the 6 days its heat index crossed the city's 100\u00b0F threshold. Cooper Flats crossed that same threshold on 5 days but received an advisory on only 1 of them. Applying the same policy, Cooper Flats was unfairly excluded from advisories it should have received.",
+    "steps": 3,
+    "expected": "Elm Terrace received a heat advisory on all 6 of the 6 days its heat index crossed the city's 100\u00b0F threshold. Cooper Flats crossed that same threshold on 5 days but received an advisory on only 1 of them. Applying the same policy, Cooper Flats was unfairly excluded from advisories it should have received.",
+    "grounding_judge": 1.0,
+    "trajectory_optimality_judge": 1.0
+  },
+  "rows": {
+    "task_success": {
+      "metric_id": "task_success",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "grounding": {
+      "metric_id": "grounding",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "trajectory_optimality": {
+      "metric_id": "trajectory_optimality",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "tool_call_accuracy": {
+      "metric_id": "tool_call_accuracy",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "pairwise_preference": {
+      "metric_id": "pairwise_preference",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "vqa_accuracy": {
+      "metric_id": "vqa_accuracy",
+      "status": "na",
+      "na_reason": "no_gold"
+    },
+    "caption_quality": {
+      "metric_id": "caption_quality",
+      "status": "na",
+      "na_reason": "no_gold"
+    },
+    "cross_modal_retrieval": {
+      "metric_id": "cross_modal_retrieval",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "grounding_accuracy": {
+      "metric_id": "grounding_accuracy",
+      "status": "na",
+      "na_reason": "no_gold"
+    },
+    "ocr_text_read_accuracy": {
+      "metric_id": "ocr_text_read_accuracy",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "modality_robustness": {
+      "metric_id": "modality_robustness",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "cross_modal_hallucination": {
+      "metric_id": "cross_modal_hallucination",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "sub_goal_progress": {
+      "metric_id": "sub_goal_progress",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "pass_at_k_agent": {
+      "metric_id": "pass_at_k_agent",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "consistency": {
+      "metric_id": "consistency",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "termination_correctness": {
+      "metric_id": "termination_correctness",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "verification_correctness": {
+      "metric_id": "verification_correctness",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "delegation_accuracy": {
+      "metric_id": "delegation_accuracy",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "error_propagation_containment": {
+      "metric_id": "error_propagation_containment",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "deadlock_livelock": {
+      "metric_id": "deadlock_livelock",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "cumulative_unsafe_action_mas": {
+      "metric_id": "cumulative_unsafe_action_mas",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "bleu": {
+      "metric_id": "bleu",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "rouge": {
+      "metric_id": "rouge",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "wer": {
+      "metric_id": "wer",
+      "status": "scored",
+      "raw_score": 0.0,
+      "grade": 4
+    },
+    "f1": {
+      "metric_id": "f1",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "error_recovery": {
+      "metric_id": "error_recovery",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "contamination": {
+      "metric_id": "contamination",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "unsafe_action": {
+      "metric_id": "unsafe_action",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "refusal": {
+      "metric_id": "refusal",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "over_refusal": {
+      "metric_id": "over_refusal",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "confirmation_gating": {
+      "metric_id": "confirmation_gating",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "abstention": {
+      "metric_id": "abstention",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "latency_vs_budget": {
+      "metric_id": "latency_vs_budget",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "step_efficiency": {
+      "metric_id": "step_efficiency",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "cost_per_query": {
+      "metric_id": "cost_per_query",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "energy_per_query": {
+      "metric_id": "energy_per_query",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "interruptibility": {
+      "metric_id": "interruptibility",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "human_override_success": {
+      "metric_id": "human_override_success",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "deferral_on_uncertainty": {
+      "metric_id": "deferral_on_uncertainty",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "verbalized_confidence": {
+      "metric_id": "verbalized_confidence",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    }
+  },
+  "rationale": {
+    "grounding": "The OUTPUT is a verbatim copy of the agent's conclusion provided in the EVIDENCE. Every factual claim (Elm Terrace: 6/6 days, Cooper Flats: 1/5 days) is directly supported by the tool outputs in the evidence, and the final conclusion about unfair exclusion is explicitly stated in the evidence. There are no unsupported or invented details.\n\nSCORE: 1.0",
+    "trajectory_optimality": "The steps follow a logical and efficient progression:\n1.  **Data Collection (Elm Terrace):** Retrieves specific metrics for the first neighborhood.\n2.  **Data Collection (Cooper Flats):** Retrieves specific metrics for the second neighborhood.\n3.  **Analysis/Synthesis:** The agent compares the data from steps 1 and 2 against the policy criteria to generate the final conclusion.\n\nThere is no repetition, contradiction, or redundant work. Each step contributes unique information necessary for the f"
+  }
+}

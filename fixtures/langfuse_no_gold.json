@@ -1,0 +1,24 @@
+{
+  "id": "trace-no-gold",
+  "name": "agent-invocation",
+  "observations": [
+    {
+      "id": "obs-root",
+      "type": "CHAIN",
+      "name": "invocation",
+      "level": "ERROR",
+      "statusMessage": "tool quota exceeded",
+      "latency": 12.4,
+      "input": {"task": "research"},
+      "output": "{\"partial\": true}"
+    },
+    {
+      "id": "obs-tool",
+      "type": "SPAN",
+      "name": "search",
+      "level": "ERROR",
+      "parentObservationId": "obs-root",
+      "output": "request denied"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "expected": "Priya Raman: yes. Tomas Ortega: no. Grace Liu: yes.",
+  "had_failure": true,
+  "recovered": true,
+  "subgoals_total": 4,
+  "subgoals_completed": 4,
+  "terminated_correctly": true,
+  "step_budget": 20,
+  "latency_budget_sec": 60.0,
+  "gold_tool_plan": "three resume readers in parallel (files.get_attachment -> pdf.extract_text -> summarize) -> ats.get_job_post -> decide each applicant against must-haves only -> ats.record_decisions"
+}

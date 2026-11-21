@@ -1,0 +1,59 @@
+{
+  "trace_id": "t-nested-run",
+  "spans": [
+    {
+      "span_id": "root",
+      "parent_span_id": null,
+      "span_name": "main",
+      "span_kind": "Internal",
+      "status_code": "Ok",
+      "span_attributes": {},
+      "timestamp": "2026-10-01T10:00:00Z",
+      "child_spans": [
+        {
+          "span_id": "agent1",
+          "parent_span_id": "root",
+          "span_name": "CodeAgent.run",
+          "span_kind": "Internal",
+          "status_code": "Ok",
+          "span_attributes": {
+            "openinference.span.kind": "AGENT",
+            "input.value": "find a flight and book a seat",
+            "output.value": "booked seat 14C"
+          },
+          "timestamp": "2026-10-01T10:00:01Z",
+          "child_spans": [
+            {
+              "span_id": "llm1",
+              "parent_span_id": "agent1",
+              "span_name": "LiteLLMModel.__call__",
+              "span_kind": "Internal",
+              "status_code": "Ok",
+              "span_attributes": {
+                "openinference.span.kind": "LLM",
+                "input.value": "plan the next step",
+                "output.value": "call search_flights"
+              },
+              "timestamp": "2026-10-01T10:00:02Z",
+              "child_spans": []
+            },
+            {
+              "span_id": "tool1",
+              "parent_span_id": "agent1",
+              "span_name": "FinderTool",
+              "span_kind": "Internal",
+              "status_code": "Error",
+              "span_attributes": {
+                "openinference.span.kind": "TOOL",
+                "input.value": "route YYZ-LHR",
+                "output.value": "timeout"
+              },
+              "timestamp": "2026-10-01T10:00:03Z",
+              "child_spans": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "expected": "All 4 cited cases are in the case folder.",
+  "had_failure": true,
+  "recovered": true,
+  "subgoals_total": 4,
+  "subgoals_completed": 4,
+  "terminated_correctly": true,
+  "step_budget": 13,
+  "latency_budget_sec": 60.0,
+  "gold_tool_plan": "docs.open the draft -> extract citations -> folder.search each case -> on zero hits, folder.list with a partial name and docs.open the candidate to confirm the citation -> report"
+}

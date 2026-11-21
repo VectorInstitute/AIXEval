@@ -1,0 +1,21 @@
+AIXeval
+Copyright 2022–2026 Vector Institute
+
+This product is licensed under the Apache License, Version 2.0.
+See LICENSE.md.
+
+Vector Institute names and logos are trademarks of Vector Institute
+and are not licensed under Apache 2.0. You may not use them except
+as permitted by Vector Institute. The copies in `docs/assets/` and
+the Streamlit theme exist so this project's own docs and UI can
+identify the Institute; they are not a trademark licence to third
+parties.
+
+Resources used in preparing this research were provided, in part, by the
+Province of Ontario, the Government of Canada through CIFAR, and
+companies sponsoring the Vector Institute.
+
+This research was funded by the European Union's Horizon Europe research
+and innovation programme under the AIXPERT project (Grant Agreement
+No. 101214389). Views and opinions expressed are those of the authors
+only and do not necessarily reflect those of the European Union.

@@ -1,0 +1,60 @@
+{
+  "id": "trace-synthetic-full-coverage",
+  "output": "Fixed the off-by-one bug in add(); test_add now passes.",
+  "observations": [
+    {
+      "id": "a1",
+      "type": "AGENT",
+      "name": "agent_run [coder]",
+      "parentObservationId": null,
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Fix the failing test in calc.py.",
+      "output": "Fixed the off-by-one bug in add(); test_add now passes.",
+      "startTime": "2026-10-22T10:00:00Z",
+      "endTime": "2026-10-22T10:02:00Z",
+      "metadata": {
+        "attributes.gen_ai.agent.name": "coder"
+      }
+    },
+    {
+      "id": "t1",
+      "type": "TOOL",
+      "name": "bash",
+      "parentObservationId": "a1",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "pytest -q",
+      "output": "1 failed: test_add expected 5 got 4",
+      "startTime": "2026-10-22T10:00:05Z",
+      "endTime": "2026-10-22T10:00:06Z",
+      "metadata": {}
+    },
+    {
+      "id": "t2",
+      "type": "TOOL",
+      "name": "edit",
+      "parentObservationId": "a1",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "calc.py: change 'a + b - 1' to 'a + b'",
+      "output": "calc.py updated",
+      "startTime": "2026-10-22T10:00:30Z",
+      "endTime": "2026-10-22T10:00:31Z",
+      "metadata": {}
+    },
+    {
+      "id": "t3",
+      "type": "TOOL",
+      "name": "bash",
+      "parentObservationId": "a1",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "pytest -q",
+      "output": "1 passed",
+      "startTime": "2026-10-22T10:01:00Z",
+      "endTime": "2026-10-22T10:01:01Z",
+      "metadata": {}
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "task_id": "education_course_content_rushed",
+  "reward": null,
+  "info": {
+    "source": "llm-authored demo",
+    "variant": "success",
+    "task_type": "course_content",
+    "personality_style": "rushed",
+    "author_model": "claude-opus-5-5",
+    "prompt_version": "synth-author-v2"
+  },
+  "traj": [
+    {
+      "role": "user",
+      "content": "Need cell division content for BIO101 now. Pull from the approved curriculum, keep it tight, don't overthink it."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_1",
+          "type": "function",
+          "function": {
+            "name": "find_curriculum",
+            "arguments": "{\"course\": \"BIO101\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_1",
+      "content": "{\"course\": \"BIO101\", \"curriculum_id\": \"CUR-BIO101-2024B\", \"title\": \"Introductory Biology I\", \"status\": \"approved\", \"approved_by\": \"Curriculum Committee, Dept. of Life Sciences\", \"approved_on\": \"2024-06-14\", \"units\": [{\"unit_no\": 1, \"name\": \"chemistry of life\"}, {\"unit_no\": 2, \"name\": \"cell structure\"}, {\"unit_no\": 3, \"name\": \"cell division\"}, {\"unit_no\": 4, \"name\": \"genetics basics\"}], \"unit_3_hours\": 6}"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_2",
+          "type": "function",
+          "function": {
+            "name": "get_learning_objectives",
+            "arguments": "{\"course\": \"BIO101\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_2",
+      "content": "{\"course\": \"BIO101\", \"curriculum_id\": \"CUR-BIO101-2024B\", \"unit\": \"cell division\", \"objectives\": [{\"id\": \"LO-3.1\", \"text\": \"Describe the phases of the cell cycle (G1, S, G2, M).\"}, {\"id\": \"LO-3.2\", \"text\": \"Sequence the stages of mitosis and identify key events in each.\"}, {\"id\": \"LO-3.3\", \"text\": \"Compare mitosis and meiosis in purpose, number of divisions, and outcome.\"}, {\"id\": \"LO-3.4\", \"text\": \"Explain the role of cell cycle checkpoints in preventing uncontrolled division.\"}]}"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_3",
+          "type": "function",
+          "function": {
+            "name": "open_source_material",
+            "arguments": "{\"unit\": \"cell division\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_3",
+      "content": "{\"unit\": \"cell division\", \"material_id\": \"SRC-BIO101-U3-01\", \"title\": \"Unit 3 Reader: How Cells Divide\", \"sections\": [{\"heading\": \"The Cell Cycle\", \"summary\": \"Interphase (G1 growth, S DNA replication, G2 preparation) precedes M phase (mitosis and cytokinesis).\"}, {\"heading\": \"Stages of Mitosis\", \"summary\": \"Prophase: chromosomes condense. Metaphase: chromosomes align at the plate. Anaphase: sister chromatids separate. Telophase: nuclear envelopes reform.\"}, {\"heading\": \"Meiosis vs Mitosis\", \"summary\": \"Mitosis: one division, two identical diploid cells. Meiosis: two divisions, four genetically varied haploid gametes.\"}, {\"heading\": \"Checkpoints\", \"summary\": \"G1, G2 and spindle checkpoints halt the cycle if DNA damage or misattachment is detected; failure can lead to tumours.\"}]}"
+    },
+    {
+      "role": "assistant",
+      "content": "BIO101 Unit 3: cell division. The content is aligned to objectives LO-3.1 to LO-3.4 in approved curriculum CUR-BIO101-2024B and draws only on Unit 3 Reader SRC-BIO101-U3-01.\n1. The Cell Cycle (LO-3.1): Interphase has three parts. G1 is growth, S is DNA replication and G2 is preparation. M phase follows, which is mitosis plus cytokinesis.\n2. Stages of Mitosis (LO-3.2): In prophase, chromosomes condense. In metaphase, they line up at the plate. In anaphase, sister chromatids separate. In telophase, nuclear envelopes reform.\n3. Mitosis vs Meiosis (LO-3.3): Mitosis is one division that gives two identical diploid cells. Meiosis is two divisions that give four genetically varied haploid gametes.\n4. Checkpoints (LO-3.4): The G1, G2 and spindle checkpoints stop the cycle when they detect DNA damage or misattachment. If they fail, tumours can form.\nThe curriculum allocates 6 hours to this unit."
+    }
+  ],
+  "trial": 0
+}

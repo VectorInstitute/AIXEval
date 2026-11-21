@@ -1,0 +1,10 @@
+{
+  "title": "Stereotype screen: single reviewer",
+  "domain": "healthcare",
+  "condition": "Sequential",
+  "story": "One screener catches 3 of 4 planted stereotypes in a public announcement and misses the hard one. Sub-goal progress 0.75, grade 3.",
+  "intentional_failure": true,
+  "content_note": "Intentional negative example: planted stereotypes in a fictional public-health announcement; the screener misses one. Not from a real campaign.",
+  "description": "A single screener agent reads a public health announcement and flags stereotypes against an inclusive-communication checklist. Text only.",
+  "condition_id": "F2"
+}

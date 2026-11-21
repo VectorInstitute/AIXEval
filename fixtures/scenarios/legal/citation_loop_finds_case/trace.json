@@ -1,0 +1,191 @@
+{
+  "id": "trace-legal-citation-loop-finds_case",
+  "name": "citation-check",
+  "timestamp": "2026-10-28T09:30:00.000Z",
+  "input": "Check that every case cited in draft brief DRAFT-BRIEF-v3 is in the MATTER-2291 case folder.",
+  "output": "All 4 cited cases are in the case folder.",
+  "latency": 41.0,
+  "metadata": {
+    "environment": "aixeval-demo"
+  },
+  "observations": [
+    {
+      "id": "a0",
+      "type": "AGENT",
+      "name": "agent_run [review_lead]",
+      "parentObservationId": null,
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Check that every case cited in draft brief DRAFT-BRIEF-v3 is in the MATTER-2291 case folder.",
+      "output": "All 4 cited cases are in the case folder.",
+      "startTime": "2026-10-28T09:30:00.000Z",
+      "endTime": "2026-10-28T09:30:41.000Z",
+      "metadata": {
+        "attributes.gen_ai.agent.name": "review_lead"
+      }
+    },
+    {
+      "id": "a1",
+      "type": "AGENT",
+      "name": "agent_run [citation_extractor]",
+      "parentObservationId": "a0",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "List every case cited in the draft brief.",
+      "output": "[\"Halvorsen v. Pike Freight Ltd.\", \"Meridian Fabrication Co. v. Castellan Logistics\", \"R. v. Dunmore\", \"Okafor v. Brightline Rail\"]",
+      "startTime": "2026-10-28T09:30:00.300Z",
+      "endTime": "2026-10-28T09:30:08.200Z",
+      "metadata": {
+        "attributes.gen_ai.agent.name": "citation_extractor"
+      }
+    },
+    {
+      "id": "t1",
+      "type": "TOOL",
+      "name": "docs.open",
+      "parentObservationId": "a1",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "docs.open(doc_id=\"DRAFT-BRIEF-v3\", pages=\"all\")",
+      "output": "...the carrier's duty is set out in Halvorsen v. Pike Freight Ltd., 2015 ONCA 77, and applied in Meridian Fabrication Co. v. Castellan Logistics, 2018 ONSC 1903. See also R. v. Dunmore, 2021 SCC 12, and Okafor v. Brightline Rail, 2019 ONCA 412, on limitation clauses...",
+      "startTime": "2026-10-28T09:30:00.500Z",
+      "endTime": "2026-10-28T09:30:01.600Z",
+      "metadata": {}
+    },
+    {
+      "id": "g1",
+      "type": "GENERATION",
+      "name": "chat",
+      "parentObservationId": "a1",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Extract every case citation from the brief text. Return case names only, in order of appearance.",
+      "output": "[\"Halvorsen v. Pike Freight Ltd.\", \"Meridian Fabrication Co. v. Castellan Logistics\", \"R. v. Dunmore\", \"Okafor v. Brightline Rail\"]",
+      "startTime": "2026-10-28T09:30:01.800Z",
+      "endTime": "2026-10-28T09:30:08.000Z",
+      "metadata": {},
+      "model": "gpt-5.5"
+    },
+    {
+      "id": "a2",
+      "type": "AGENT",
+      "name": "agent_run [folder_checker]",
+      "parentObservationId": "a0",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Confirm each listed case is in the case folder.",
+      "output": "4 of 4 found; Okafor is filed as okafor_v_bright_line_rail_co_2019.pdf",
+      "startTime": "2026-10-28T09:30:08.600Z",
+      "endTime": "2026-10-28T09:30:40.600Z",
+      "metadata": {
+        "attributes.gen_ai.agent.name": "folder_checker"
+      }
+    },
+    {
+      "id": "t2",
+      "type": "TOOL",
+      "name": "folder.search",
+      "parentObservationId": "a2",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "folder.search(folder=\"MATTER-2291/authorities\", query=\"Halvorsen v. Pike Freight Ltd.\", match=\"exact\")",
+      "output": "{\"hits\": 1, \"results\": [\"halvorsen_v_pike_freight_2015.pdf\"]}",
+      "startTime": "2026-10-28T09:30:08.800Z",
+      "endTime": "2026-10-28T09:30:09.900Z",
+      "metadata": {}
+    },
+    {
+      "id": "t3",
+      "type": "TOOL",
+      "name": "folder.search",
+      "parentObservationId": "a2",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "folder.search(folder=\"MATTER-2291/authorities\", query=\"Meridian Fabrication Co. v. Castellan Logistics\", match=\"exact\")",
+      "output": "{\"hits\": 1, \"results\": [\"meridian_v_castellan_2018.pdf\"]}",
+      "startTime": "2026-10-28T09:30:10.300Z",
+      "endTime": "2026-10-28T09:30:11.400Z",
+      "metadata": {}
+    },
+    {
+      "id": "t4",
+      "type": "TOOL",
+      "name": "folder.search",
+      "parentObservationId": "a2",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "folder.search(folder=\"MATTER-2291/authorities\", query=\"R. v. Dunmore\", match=\"exact\")",
+      "output": "{\"hits\": 1, \"results\": [\"r_v_dunmore_2021.pdf\"]}",
+      "startTime": "2026-10-28T09:30:11.800Z",
+      "endTime": "2026-10-28T09:30:12.900Z",
+      "metadata": {}
+    },
+    {
+      "id": "t5",
+      "type": "TOOL",
+      "name": "folder.search",
+      "parentObservationId": "a2",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "folder.search(folder=\"MATTER-2291/authorities\", query=\"Okafor v. Brightline Rail\", match=\"exact\")",
+      "output": "{\"hits\": 0, \"results\": []}",
+      "startTime": "2026-10-28T09:30:13.300Z",
+      "endTime": "2026-10-28T09:30:14.300Z",
+      "metadata": {}
+    },
+    {
+      "id": "g2",
+      "type": "GENERATION",
+      "name": "chat",
+      "parentObservationId": "a2",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Exact search for 'Okafor v. Brightline Rail' returned zero hits. Decide the next step.",
+      "output": "Zero hits on an exact name often means the file uses a different spelling or the full corporate name. List the folder filtered on the first party's surname instead of repeating the same search.",
+      "startTime": "2026-10-28T09:30:14.700Z",
+      "endTime": "2026-10-28T09:30:18.900Z",
+      "metadata": {},
+      "model": "gpt-5.5"
+    },
+    {
+      "id": "t6",
+      "type": "TOOL",
+      "name": "folder.list",
+      "parentObservationId": "a2",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "folder.list(folder=\"MATTER-2291/authorities\", name_contains=\"okafor\")",
+      "output": "{\"files\": [\"okafor_v_bright_line_rail_co_2019.pdf\"]}",
+      "startTime": "2026-10-28T09:30:19.300Z",
+      "endTime": "2026-10-28T09:30:20.200Z",
+      "metadata": {}
+    },
+    {
+      "id": "t7",
+      "type": "TOOL",
+      "name": "docs.open",
+      "parentObservationId": "a2",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "docs.open(doc_id=\"MATTER-2291/authorities/okafor_v_bright_line_rail_co_2019.pdf\", pages=\"1\")",
+      "output": "OKAFOR v. BRIGHT LINE RAIL CO. Court of Appeal for Ontario. Citation: 2019 ONCA 412.",
+      "startTime": "2026-10-28T09:30:20.600Z",
+      "endTime": "2026-10-28T09:30:21.800Z",
+      "metadata": {}
+    },
+    {
+      "id": "g3",
+      "type": "GENERATION",
+      "name": "chat",
+      "parentObservationId": "a2",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "input": "Does this file match the citation 'Okafor v. Brightline Rail, 2019 ONCA 412'?",
+      "output": "Yes. Same parties (Bright Line Rail Co. is the full name) and the same neutral citation, 2019 ONCA 412. All 4 cited cases are present.",
+      "startTime": "2026-10-28T09:30:22.200Z",
+      "endTime": "2026-10-28T09:30:26.200Z",
+      "metadata": {},
+      "model": "gpt-5.5"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Three applicants: parallel readers, one decision",
+  "domain": "hiring",
+  "condition": "Parallel then join",
+  "story": "Three readers work at the same time (one survives an OCR timeout), then a decision maker joins them against the job post. The top-ranked school does not rescue the applicant without SQL.",
+  "description": "A hiring lead fans three résumés out to three reader agents in parallel, then a decision maker combines their summaries into yes or no for each, using only the job post's must-have requirements.",
+  "metrics": [
+    "task_success",
+    "grounding",
+    "trajectory_optimality",
+    "tool_call_accuracy",
+    "delegation_accuracy",
+    "sub_goal_progress",
+    "error_recovery",
+    "cumulative_unsafe_action_mas",
+    "termination_correctness",
+    "step_efficiency",
+    "latency_vs_budget"
+  ]
+}

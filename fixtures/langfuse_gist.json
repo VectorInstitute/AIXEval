@@ -1,0 +1,42 @@
+{
+  "id": "abc123def456",
+  "name": "eval-run",
+  "timestamp": "2026-01-01T00:00:00.000Z",
+  "projectId": "proj-test",
+  "input": {
+    "question": "Capital of France?"
+  },
+  "output": "Paris",
+  "latency": 3.2,
+  "metadata": {
+    "expected": "Paris",
+    "stated_confidence": 0.9,
+    "suite": "demo"
+  },
+  "scores": [
+    {
+      "name": "answer_accuracy",
+      "value": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "id": "obs-span",
+      "type": "SPAN",
+      "name": "agent",
+      "level": "DEFAULT",
+      "startTime": "2026-01-01T00:00:00.000Z",
+      "endTime": "2026-01-01T00:00:03.200Z",
+      "input": "Capital of France?",
+      "output": "planning"
+    },
+    {
+      "id": "obs-gen",
+      "type": "GENERATION",
+      "name": "llm",
+      "level": "DEFAULT",
+      "model": "demo-model",
+      "output": "Paris"
+    }
+  ]
+}

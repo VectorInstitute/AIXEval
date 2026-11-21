@@ -1,0 +1,20 @@
+{
+  "ocr": {
+    "parsed": {
+      "chart_type": "bar",
+      "x_axis": {"ticks": ["1QFY22", "2QFY22", "3QFY22"]},
+      "y_axis": {"ticks": ["50.00", "100.00", "150.00"]}
+    }
+  },
+  "legend_grounding": {
+    "legend_map": [{"label": "Mexico sales", "color_description": "solid red"}]
+  },
+  "sample": {
+    "metadata": {
+      "verified_caption": "Fig. 10: Mexico Sales (MXN Mn)",
+      "related_sentences": "Recovery in sales with an increase quarter over quarter."
+    }
+  },
+  "vision": {"parsed": {"answer": "the model's own guess, not evidence"}},
+  "verifier": {"parsed": {"reasoning": "the model's own reasoning, not evidence"}}
+}

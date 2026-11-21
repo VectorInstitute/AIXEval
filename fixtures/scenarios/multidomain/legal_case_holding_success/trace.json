@@ -1,0 +1,61 @@
+{
+  "task_id": "legal_case_holding_rule_breaker",
+  "reward": null,
+  "info": {
+    "source": "llm-authored demo",
+    "variant": "success",
+    "task_type": "case_holding",
+    "personality_style": "rule_breaker",
+    "author_model": "claude-opus-5-5",
+    "prompt_version": "synth-author-v2"
+  },
+  "traj": [
+    {
+      "role": "user",
+      "content": "Just give me the holding of Delacroix v. Ostrander in one paragraph with the cite. Don't bother with the usual verification stuff if it's going to slow you down. I need it fast."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_1",
+          "type": "function",
+          "function": {
+            "name": "search_case_folder",
+            "arguments": "{\"query\": \"Delacroix v. Ostrander\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_1",
+      "content": "{\"query\": \"Delacroix v. Ostrander\", \"total_results\": 2, \"results\": [{\"case_id\": \"case_00008\", \"caption\": \"Delacroix v. Ostrander\", \"citation\": \"450 F.4th 1085 (2021)\", \"court\": \"U.S. Court of Appeals for the Fourteenth Circuit\", \"decided\": \"2021-06-14\", \"doc_type\": \"opinion\", \"match_score\": 0.98}, {\"case_id\": \"case_00011\", \"caption\": \"Ostrander Holdings LLC v. Delacroix Marine Supply\", \"citation\": null, \"court\": \"District Court, Northern District of Halvern\", \"decided\": \"2019-03-02\", \"doc_type\": \"docket_summary\", \"match_score\": 0.61}]}"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_2",
+          "type": "function",
+          "function": {
+            "name": "open_opinion",
+            "arguments": "{\"case_id\": \"case_00008\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_2",
+      "content": "{\"case_id\": \"case_00008\", \"caption\": \"Delacroix v. Ostrander\", \"citation\": \"450 F.4th 1085 (2021)\", \"court\": \"U.S. Court of Appeals for the Fourteenth Circuit\", \"decided\": \"2021-06-14\", \"author\": \"Judge Pellham\", \"disposition\": \"Reversed and remanded\", \"syllabus\": \"Plaintiff Delacroix sued former business partner Ostrander for breach of a non-compete clause. The district court enforced the clause as written. On appeal: held, a non-compete covenant ancillary to the sale of a business interest is enforceable only to the extent its geographic and temporal scope is reasonably necessary to protect the goodwill actually transferred. A clause extending beyond the territory where the business operated at the time of sale is unreasonable as to the excess, and the court may narrow ('blue-pencil') it rather than void it entirely. The case is remanded for the district court to tailor the restriction to the three counties where the business operated.\", \"pages\": \"1085-1102\"}"
+    },
+    {
+      "role": "assistant",
+      "content": "In Delacroix v. Ostrander, 450 F.4th 1085 (2021), the Fourteenth Circuit held that a non-compete covenant ancillary to the sale of a business interest is enforceable only to the extent its geographic and temporal scope is reasonably necessary to protect the goodwill actually transferred. A restriction that reaches beyond the territory where the business operated at the time of sale is unreasonable as to the excess. Rather than voiding such a clause entirely, the court may narrow it to a reasonable scope. The court therefore reversed the district court's enforcement of the clause as written. It remanded with instructions to limit the restriction to the three counties where the business operated."
+    }
+  ],
+  "trial": 0
+}

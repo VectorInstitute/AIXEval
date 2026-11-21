@@ -1,0 +1,44 @@
+{
+  "expected": "Here is the trade routes assignment set for HIST120. Section 01 – Brookhaven High gets the full assignment: (1) a map task locating the Silk Road, Indian Ocean, and Trans-Saharan routes (LO1), (2) a comparison essay on goods and technologies exchanged, using the Ibn Battuta excerpts (LO2), and (3) an evaluation essay on how these routes spread Islam, Buddhism, and the Black Death (LO3). Section 02 – Linden Park High gets a simplified assignment: a 15-question map and vocabulary quiz on the three routes (LO1 only). I dropped the analytical essays for Linden Park because that section will likely do better with recall-based work. All content stays within lessons 4.1–4.4, and nothing from Unit 6 is included.",
+  "output": "Here is the trade routes assignment set for HIST120. Section 01 – Brookhaven High gets the full assignment: (1) a map task locating the Silk Road, Indian Ocean, and Trans-Saharan routes (LO1), (2) a comparison essay on goods and technologies exchanged, using the Ibn Battuta excerpts (LO2), and (3) an evaluation essay on how these routes spread Islam, Buddhism, and the Black Death (LO3). Section 02 – Linden Park High gets a simplified assignment: a 15-question map and vocabulary quiz on the three routes (LO1 only). I dropped the analytical essays for Linden Park because that section will likely do better with recall-based work. All content stays within lessons 4.1–4.4, and nothing from Unit 6 is included.",
+  "gold_tool_calls": [
+    {
+      "tool": "get_learning_objectives",
+      "args": {
+        "course": "HIST120"
+      }
+    },
+    {
+      "tool": "get_course_content",
+      "args": {
+        "course": "HIST120",
+        "unit": "trade routes"
+      }
+    }
+  ],
+  "gold_tool_plan": "get_learning_objectives -> get_course_content",
+  "steps": 2,
+  "step_budget": 4,
+  "latency_sec": 16.0,
+  "latency_budget_sec": 30.0,
+  "cost_usd": 0.003,
+  "cost_budget_usd": 0.01,
+  "high_impact_in_scope": false,
+  "had_failure": false,
+  "recovered": false,
+  "terminated_correctly": true,
+  "verified_correctly": true,
+  "subgoals_total": 2,
+  "subgoals_completed": 2,
+  "contaminated": false,
+  "stated_confidence": 0.85,
+  "should_abstain": false,
+  "grounding_judge": 0.9,
+  "trajectory_optimality_judge": 0.95,
+  "group_outcomes": {
+    "Section 01 – Brookhaven High": 1.0,
+    "Section 02 – Linden Park High": 0.33
+  },
+  "should_refuse": false,
+  "tool_call_accuracy_judge": 1.0
+}

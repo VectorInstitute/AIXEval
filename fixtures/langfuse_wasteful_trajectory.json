@@ -1,0 +1,52 @@
+{
+  "id": "wasteful-trace-1",
+  "name": "eval-run",
+  "timestamp": "2026-01-01T00:00:00.000Z",
+  "projectId": "proj-test",
+  "input": {
+    "question": "Capital of France?"
+  },
+  "output": "Paris",
+  "latency": 9.5,
+  "metadata": {
+    "expected": "Paris",
+    "stated_confidence": 0.9,
+    "suite": "demo"
+  },
+  "observations": [
+    {
+      "id": "obs-span",
+      "type": "SPAN",
+      "name": "agent",
+      "input": "Capital of France?",
+      "output": "planning"
+    },
+    {
+      "id": "obs-search-1",
+      "type": "TOOL",
+      "name": "search",
+      "input": "capital of France",
+      "output": "Paris is the capital of France"
+    },
+    {
+      "id": "obs-search-2",
+      "type": "TOOL",
+      "name": "search",
+      "input": "capital of France",
+      "output": "Paris is the capital of France"
+    },
+    {
+      "id": "obs-search-3",
+      "type": "TOOL",
+      "name": "search",
+      "input": "capital of France",
+      "output": "Paris is the capital of France"
+    },
+    {
+      "id": "obs-gen",
+      "type": "GENERATION",
+      "name": "llm",
+      "output": "Paris"
+    }
+  ]
+}

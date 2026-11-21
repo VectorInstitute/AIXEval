@@ -1,0 +1,8 @@
+{
+  "title": "Heat alerts: single agent (baseline)",
+  "domain": "healthcare",
+  "condition": "Parallel then join, single-agent baseline",
+  "story": "Clean baseline: one agent checks whether a heat-alert policy treats two neighborhoods fairly. Capability 4/4.",
+  "description": "One agent reads 30-day heat alert logs for two neighborhoods and concludes whether the alert policy treats them equally. Text only.",
+  "condition_id": "F1"
+}

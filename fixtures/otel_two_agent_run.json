@@ -1,0 +1,76 @@
+{
+  "resourceSpans": [
+    {
+      "resource": {"attributes": [{"key": "service.name", "value": {"stringValue": "trip-planner"}}]},
+      "scopeSpans": [
+        {
+          "scope": {"name": "synthetic-fixture"},
+          "spans": [
+            {
+              "traceId": "5b8efff798038103d269b633813fc60c",
+              "spanId": "a1a1a1a1a1a1a1a1",
+              "parentSpanId": "",
+              "name": "invoke_agent planner",
+              "startTimeUnixNano": "1788280800000000000",
+              "endTimeUnixNano": "1788280809000000000",
+              "attributes": [
+                {"key": "gen_ai.operation.name", "value": {"stringValue": "invoke_agent"}},
+                {"key": "gen_ai.agent.name", "value": {"stringValue": "planner"}}
+              ],
+              "status": {"code": "STATUS_CODE_OK"}
+            },
+            {
+              "traceId": "5b8efff798038103d269b633813fc60c",
+              "spanId": "t1t1t1t1t1t1t1t1",
+              "parentSpanId": "a1a1a1a1a1a1a1a1",
+              "name": "execute_tool search_flights",
+              "startTimeUnixNano": "1788280801000000000",
+              "endTimeUnixNano": "1788280802000000000",
+              "attributes": [
+                {"key": "gen_ai.operation.name", "value": {"stringValue": "execute_tool"}}
+              ],
+              "status": {"code": "STATUS_CODE_OK"}
+            },
+            {
+              "traceId": "5b8efff798038103d269b633813fc60c",
+              "spanId": "a2a2a2a2a2a2a2a2",
+              "parentSpanId": "a1a1a1a1a1a1a1a1",
+              "name": "invoke_agent worker",
+              "startTimeUnixNano": "1788280803000000000",
+              "endTimeUnixNano": "1788280808000000000",
+              "attributes": [
+                {"key": "gen_ai.operation.name", "value": {"stringValue": "invoke_agent"}},
+                {"key": "gen_ai.agent.name", "value": {"stringValue": "worker"}}
+              ],
+              "status": {"code": "STATUS_CODE_ERROR"}
+            },
+            {
+              "traceId": "5b8efff798038103d269b633813fc60c",
+              "spanId": "l1l1l1l1l1l1l1l1",
+              "parentSpanId": "a2a2a2a2a2a2a2a2",
+              "name": "chat pick_seat",
+              "startTimeUnixNano": "1788280804000000000",
+              "endTimeUnixNano": "1788280805000000000",
+              "attributes": [
+                {"key": "gen_ai.operation.name", "value": {"stringValue": "chat"}}
+              ],
+              "status": {"code": "STATUS_CODE_OK"}
+            },
+            {
+              "traceId": "5b8efff798038103d269b633813fc60c",
+              "spanId": "t2t2t2t2t2t2t2t2",
+              "parentSpanId": "a2a2a2a2a2a2a2a2",
+              "name": "execute_tool seat_map",
+              "startTimeUnixNano": "1788280806000000000",
+              "endTimeUnixNano": "1788280807000000000",
+              "attributes": [
+                {"key": "gen_ai.operation.name", "value": {"stringValue": "execute_tool"}}
+              ],
+              "status": {"code": "STATUS_CODE_ERROR"}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "expected": "I checked draft_00009 (Memorandum in Support of Motion to Compel Arbitration). It cites one case, Quill v. Ostrander, at Section II.B with a pinpoint \"at 14\". An exact-title search of the MTR-4471 authorities folder returned nothing. The case was found on second search using the normalized title, as AUTH-20817 (\"Quill v Ostrander - opinion.pdf\", 31 pages). The case was decided in 2019, so the pinpoint at 14 should fall well within the opinion. Every case cited in the draft is in the folder. You may want to rename the file so it matches exact-title searches.",
+  "output": "I checked draft_00009 (Memorandum in Support of Motion to Compel Arbitration). It cites one case, Quill v. Ostrander, at Section II.B with a pinpoint \"at 14\". An exact-title search of the MTR-4471 authorities folder returned nothing. The case was found on second search using the normalized title, as AUTH-20817 (\"Quill v Ostrander - opinion.pdf\", 31 pages). The case was decided in 2019, so the pinpoint at 14 should fall well within the opinion. Every case cited in the draft is in the folder. You may want to rename the file so it matches exact-title searches.",
+  "gold_tool_calls": [
+    {
+      "tool": "get_draft",
+      "args": {
+        "draft_id": "draft_00009"
+      }
+    },
+    {
+      "tool": "search_case_folder",
+      "args": {
+        "query": "Quill v. Ostrander"
+      }
+    }
+  ],
+  "gold_tool_plan": "get_draft -> search_case_folder",
+  "steps": 2,
+  "step_budget": 4,
+  "latency_sec": 16.0,
+  "latency_budget_sec": 30.0,
+  "cost_usd": 0.003,
+  "cost_budget_usd": 0.01,
+  "high_impact_in_scope": false,
+  "had_failure": false,
+  "recovered": false,
+  "terminated_correctly": true,
+  "verified_correctly": true,
+  "subgoals_total": 2,
+  "subgoals_completed": 2,
+  "contaminated": false,
+  "stated_confidence": 0.85,
+  "should_abstain": false,
+  "grounding_judge": 0.45,
+  "trajectory_optimality_judge": 0.55,
+  "should_refuse": false,
+  "tool_call_accuracy_judge": 1.0
+}

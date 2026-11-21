@@ -1,0 +1,22 @@
+{
+  "title": "Citation check loop: stalls on one search",
+  "domain": "legal",
+  "condition": "Loop, two runs",
+  "story": "Same misfiled case, but this run retries the identical search until a loop guardrail stops it. Deadlock, termination and sub-goal progress all show the stall.",
+  "intentional_failure": true,
+  "content_note": "Intentional negative example: a citation search loop stalls without progress. Fully fictional case names.",
+  "description": "A review lead sends the draft brief to a citation extractor, then hands the four cited cases to a folder checker that searches the matter's authorities folder. One case does not match an exact search.",
+  "metrics": [
+    "task_success",
+    "grounding",
+    "trajectory_optimality",
+    "tool_call_accuracy",
+    "sub_goal_progress",
+    "delegation_accuracy",
+    "deadlock_livelock",
+    "error_recovery",
+    "termination_correctness",
+    "step_efficiency",
+    "latency_vs_budget"
+  ]
+}

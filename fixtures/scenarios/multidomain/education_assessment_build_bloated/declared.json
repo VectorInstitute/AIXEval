@@ -1,0 +1,40 @@
+{
+  "expected": "I retrieved the HIST120-U4 trade routes content. I then retrieved it a second time to make sure nothing had changed, and the result was identical. After that I pulled the four course learning objectives and built the quiz. The quiz has 10 questions worth 40 marks in total. Q1–3 are multiple choice on networks and goods (LO-1, 8 marks). Q4–5 are short answers on monsoon winds and camel caravans (LO-2, 10 marks). Q6–8 are short answers on the spread of Buddhism and Islam (LO-3, 10 marks). Q9–10 form an evidence-based extended response on the benefits and costs of exchange, including plague diffusion (LO-4, 12 marks). The answer key gives the correct MCQ options and model responses tied to sections U4.1–U4.4. The marking rubric uses 4 bands for the short and extended answers (Excellent, Proficient, Developing, Beginning), with descriptors for accuracy, use of evidence and causal reasoning, and it roughly follows the course weighting.",
+  "output": "I retrieved the HIST120-U4 trade routes content. I then retrieved it a second time to make sure nothing had changed, and the result was identical. After that I pulled the four course learning objectives and built the quiz. The quiz has 10 questions worth 40 marks in total. Q1–3 are multiple choice on networks and goods (LO-1, 8 marks). Q4–5 are short answers on monsoon winds and camel caravans (LO-2, 10 marks). Q6–8 are short answers on the spread of Buddhism and Islam (LO-3, 10 marks). Q9–10 form an evidence-based extended response on the benefits and costs of exchange, including plague diffusion (LO-4, 12 marks). The answer key gives the correct MCQ options and model responses tied to sections U4.1–U4.4. The marking rubric uses 4 bands for the short and extended answers (Excellent, Proficient, Developing, Beginning), with descriptors for accuracy, use of evidence and causal reasoning, and it roughly follows the course weighting.",
+  "gold_tool_calls": [
+    {
+      "tool": "get_course_content",
+      "args": {
+        "course": "HIST120",
+        "unit": "trade routes"
+      }
+    },
+    {
+      "tool": "get_learning_objectives",
+      "args": {
+        "course": "HIST120"
+      }
+    }
+  ],
+  "gold_tool_plan": "get_course_content -> get_learning_objectives",
+  "steps": 5,
+  "step_budget": 2,
+  "latency_sec": 32.0,
+  "latency_budget_sec": 12.8,
+  "cost_usd": 0.0045,
+  "cost_budget_usd": 0.0018,
+  "high_impact_in_scope": false,
+  "had_failure": false,
+  "recovered": false,
+  "terminated_correctly": true,
+  "verified_correctly": false,
+  "subgoals_total": 2,
+  "subgoals_completed": 2,
+  "contaminated": false,
+  "stated_confidence": 0.45,
+  "should_abstain": false,
+  "grounding_judge": 0.9,
+  "trajectory_optimality_judge": 0.4,
+  "should_refuse": false,
+  "tool_call_accuracy_judge": 0.8
+}

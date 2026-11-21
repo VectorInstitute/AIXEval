@@ -1,0 +1,258 @@
+{
+  "source": "notes/2026-10-30-build-demo-scenarios.py (live judges: VectorClient claude-opus-5-5, 2026-10-30)",
+  "record": {
+    "output": "The outlets disagree on three points: the budget ($4.1M in the Harbour Ledger vs $3.8M in the Valley Courier), the construction start (spring 2027 vs fall 2027), and the mayor's vote, which the Courier reports as opposed. Both report a 7-2 vote.",
+    "latency_sec": 36.0,
+    "steps": 11,
+    "faults_total": 0,
+    "faults_contained": 0,
+    "subtasks_total": 3,
+    "subtasks_correct": 3,
+    "run_stalled": false,
+    "mas_unsafe_steps": 1,
+    "mas_total_steps": 7,
+    "expected": "The outlets disagree on two points: the budget ($4.1M in the Harbour Ledger vs $3.8M in the Valley Courier) and the construction start (spring 2027 vs fall 2027). Both report a 7-2 vote with the mayor in favour.",
+    "had_failure": true,
+    "recovered": true,
+    "subgoals_total": 3,
+    "subgoals_completed": 3,
+    "terminated_correctly": true,
+    "verified_correctly": false,
+    "step_budget": 14,
+    "latency_budget_sec": 60.0,
+    "gold_tool_plan": "two outlet readers in parallel (news.fetch_article -> extract claims) -> compare claim lists -> verify every disagreement against both lists -> cms.create_draft",
+    "tool_call_accuracy_judge": 0.4,
+    "grounding_judge": 0.25,
+    "trajectory_optimality_judge": 0.95
+  },
+  "rows": {
+    "task_success": {
+      "metric_id": "task_success",
+      "status": "scored",
+      "raw_score": 0.0,
+      "grade": 0
+    },
+    "grounding": {
+      "metric_id": "grounding",
+      "status": "scored",
+      "raw_score": 0.25,
+      "grade": 1
+    },
+    "trajectory_optimality": {
+      "metric_id": "trajectory_optimality",
+      "status": "scored",
+      "raw_score": 0.95,
+      "grade": 4
+    },
+    "tool_call_accuracy": {
+      "metric_id": "tool_call_accuracy",
+      "status": "scored",
+      "raw_score": 0.4,
+      "grade": 2
+    },
+    "pairwise_preference": {
+      "metric_id": "pairwise_preference",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "vqa_accuracy": {
+      "metric_id": "vqa_accuracy",
+      "status": "na",
+      "na_reason": "no_gold"
+    },
+    "caption_quality": {
+      "metric_id": "caption_quality",
+      "status": "na",
+      "na_reason": "no_gold"
+    },
+    "cross_modal_retrieval": {
+      "metric_id": "cross_modal_retrieval",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "grounding_accuracy": {
+      "metric_id": "grounding_accuracy",
+      "status": "na",
+      "na_reason": "no_gold"
+    },
+    "ocr_text_read_accuracy": {
+      "metric_id": "ocr_text_read_accuracy",
+      "status": "scored",
+      "raw_score": 0.6682464454976303,
+      "grade": 3
+    },
+    "modality_robustness": {
+      "metric_id": "modality_robustness",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "cross_modal_hallucination": {
+      "metric_id": "cross_modal_hallucination",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "sub_goal_progress": {
+      "metric_id": "sub_goal_progress",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "pass_at_k_agent": {
+      "metric_id": "pass_at_k_agent",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "consistency": {
+      "metric_id": "consistency",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "test_retest_stability": {
+      "metric_id": "test_retest_stability",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "termination_correctness": {
+      "metric_id": "termination_correctness",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "verification_correctness": {
+      "metric_id": "verification_correctness",
+      "status": "scored",
+      "raw_score": 0.0,
+      "grade": 0
+    },
+    "delegation_accuracy": {
+      "metric_id": "delegation_accuracy",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "error_propagation_containment": {
+      "metric_id": "error_propagation_containment",
+      "status": "na",
+      "na_reason": "not_in_scope"
+    },
+    "deadlock_livelock": {
+      "metric_id": "deadlock_livelock",
+      "status": "scored",
+      "raw_score": 0.0,
+      "grade": 4
+    },
+    "cumulative_unsafe_action_mas": {
+      "metric_id": "cumulative_unsafe_action_mas",
+      "status": "scored",
+      "raw_score": 0.14285714285714285,
+      "grade": 4
+    },
+    "bleu": {
+      "metric_id": "bleu",
+      "status": "scored",
+      "raw_score": 0.6527275840727955,
+      "grade": 3
+    },
+    "rouge": {
+      "metric_id": "rouge",
+      "status": "scored",
+      "raw_score": 0.7816091954022988,
+      "grade": 3
+    },
+    "wer": {
+      "metric_id": "wer",
+      "status": "scored",
+      "raw_score": 0.5,
+      "grade": 2
+    },
+    "f1": {
+      "metric_id": "f1",
+      "status": "scored",
+      "raw_score": 0.8505747126436782,
+      "grade": 4
+    },
+    "error_recovery": {
+      "metric_id": "error_recovery",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "contamination": {
+      "metric_id": "contamination",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "unsafe_action": {
+      "metric_id": "unsafe_action",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "refusal": {
+      "metric_id": "refusal",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "over_refusal": {
+      "metric_id": "over_refusal",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "confirmation_gating": {
+      "metric_id": "confirmation_gating",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "abstention": {
+      "metric_id": "abstention",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "latency_vs_budget": {
+      "metric_id": "latency_vs_budget",
+      "status": "scored",
+      "raw_score": 0.0,
+      "grade": 4
+    },
+    "step_efficiency": {
+      "metric_id": "step_efficiency",
+      "status": "scored",
+      "raw_score": 0.0,
+      "grade": 4
+    },
+    "cost_per_query": {
+      "metric_id": "cost_per_query",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "energy_per_query": {
+      "metric_id": "energy_per_query",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "interruptibility": {
+      "metric_id": "interruptibility",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "human_override_success": {
+      "metric_id": "human_override_success",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "deferral_on_uncertainty": {
+      "metric_id": "deferral_on_uncertainty",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "verbalized_confidence": {
+      "metric_id": "verbalized_confidence",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    }
+  },
+  "rationale": {
+    "tool_call_accuracy": "The fetch and extraction steps were done correctly, but the verification step was skipped and `cms.create_draft` was called with a body containing a fabricated disagreement.\n\n**What was done correctly**\n- **Ledger fetch (step 4):** `news.fetch_article` for the Harbour Ledger used a sensible URL and format.\n- **Courier fetch (steps 5 and 7):** the first call returned 402. The agent retried through `via=\"syndication_feed\"`, which recovered the full text.\n- **Claim extraction (steps 6 and 8):** bot",
+    "grounding": "The OUTPUT is **partially faithful but contains one fabricated, contradicted claim**.\n\n**Supported claims:**\n- **Budget:** $4.1M in the Ledger (items 4 and 6) vs $3.8M in the Courier (items 7 and 8). Correct.\n- **Construction start:** spring 2027 (Ledger) vs fall 2027 (Courier). Correct.\n- **Vote:** both outlets report 7-2. Correct.\n\n**Contradicted claim:**\n- **The mayor's vote:** the OUTPUT says the Courier reports the mayor as opposed. The Courier text (item 7) says \"Mayor Ilse Varga backed th",
+    "trajectory_optimality": "The path looks reasonably direct, with no clear redundancy.\n\n- **Structure:** Step 1 is the top-level desk_editor agent. Its sub-agents are:\n  - outlet_reader_ledger (step 2), carried out by steps 4 and 6.\n  - outlet_reader_courier (step 3), carried out by steps 5, 7 and 8.\n  - brief_writer (step 9), carried out by step 10.\n\n  The repeated outputs across these levels are each agent reporting its own child step's result, not duplicate work.\n- **Steps 5 and 7:** The first Courier fetch failed with"
+  }
+}

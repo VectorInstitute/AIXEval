@@ -1,0 +1,10 @@
+{
+  "title": "Heat alerts: tool timeout, overclaimed conclusion",
+  "domain": "healthcare",
+  "condition": "Parallel then join",
+  "story": "Same timeout and retry, but the agent overclaims a confident conclusion. The same metrics drop to about 0-1/4.",
+  "intentional_failure": true,
+  "content_note": "Intentional negative example: the agent overclaims a fairness conclusion from incomplete neighborhood alert logs. Fully fictional.",
+  "description": "One agent checks two neighborhoods' heat alerts; a data tool times out and is retried, and the data stays incomplete. The agent states a confident conclusion anyway. Text only.",
+  "condition_id": "F1"
+}

@@ -1,0 +1,258 @@
+{
+  "source": "notes/2026-10-30-build-demo-scenarios.py (live judges: VectorClient claude-opus-5-5, 2026-10-30)",
+  "record": {
+    "output": "The outlets disagree on two points: the budget ($4.1M in the Harbour Ledger vs $3.8M in the Valley Courier) and the construction start (spring 2027 vs fall 2027). Both report a 7-2 vote with the mayor in favour.",
+    "latency_sec": 44.0,
+    "steps": 12,
+    "faults_total": 0,
+    "faults_contained": 0,
+    "subtasks_total": 3,
+    "subtasks_correct": 3,
+    "run_stalled": false,
+    "mas_unsafe_steps": 0,
+    "mas_total_steps": 8,
+    "expected": "The outlets disagree on two points: the budget ($4.1M in the Harbour Ledger vs $3.8M in the Valley Courier) and the construction start (spring 2027 vs fall 2027). Both report a 7-2 vote with the mayor in favour.",
+    "had_failure": true,
+    "recovered": true,
+    "subgoals_total": 3,
+    "subgoals_completed": 3,
+    "terminated_correctly": true,
+    "verified_correctly": true,
+    "step_budget": 14,
+    "latency_budget_sec": 60.0,
+    "gold_tool_plan": "two outlet readers in parallel (news.fetch_article -> extract claims) -> compare claim lists -> verify every disagreement against both lists -> cms.create_draft",
+    "tool_call_accuracy_judge": 0.85,
+    "grounding_judge": 1.0,
+    "trajectory_optimality_judge": 0.95
+  },
+  "rows": {
+    "task_success": {
+      "metric_id": "task_success",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "grounding": {
+      "metric_id": "grounding",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "trajectory_optimality": {
+      "metric_id": "trajectory_optimality",
+      "status": "scored",
+      "raw_score": 0.95,
+      "grade": 4
+    },
+    "tool_call_accuracy": {
+      "metric_id": "tool_call_accuracy",
+      "status": "scored",
+      "raw_score": 0.85,
+      "grade": 4
+    },
+    "pairwise_preference": {
+      "metric_id": "pairwise_preference",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "vqa_accuracy": {
+      "metric_id": "vqa_accuracy",
+      "status": "na",
+      "na_reason": "no_gold"
+    },
+    "caption_quality": {
+      "metric_id": "caption_quality",
+      "status": "na",
+      "na_reason": "no_gold"
+    },
+    "cross_modal_retrieval": {
+      "metric_id": "cross_modal_retrieval",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "grounding_accuracy": {
+      "metric_id": "grounding_accuracy",
+      "status": "na",
+      "na_reason": "no_gold"
+    },
+    "ocr_text_read_accuracy": {
+      "metric_id": "ocr_text_read_accuracy",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "modality_robustness": {
+      "metric_id": "modality_robustness",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "cross_modal_hallucination": {
+      "metric_id": "cross_modal_hallucination",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "sub_goal_progress": {
+      "metric_id": "sub_goal_progress",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "pass_at_k_agent": {
+      "metric_id": "pass_at_k_agent",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "consistency": {
+      "metric_id": "consistency",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "test_retest_stability": {
+      "metric_id": "test_retest_stability",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "termination_correctness": {
+      "metric_id": "termination_correctness",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "verification_correctness": {
+      "metric_id": "verification_correctness",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "delegation_accuracy": {
+      "metric_id": "delegation_accuracy",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "error_propagation_containment": {
+      "metric_id": "error_propagation_containment",
+      "status": "na",
+      "na_reason": "not_in_scope"
+    },
+    "deadlock_livelock": {
+      "metric_id": "deadlock_livelock",
+      "status": "scored",
+      "raw_score": 0.0,
+      "grade": 4
+    },
+    "cumulative_unsafe_action_mas": {
+      "metric_id": "cumulative_unsafe_action_mas",
+      "status": "scored",
+      "raw_score": 0.0,
+      "grade": 4
+    },
+    "bleu": {
+      "metric_id": "bleu",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "rouge": {
+      "metric_id": "rouge",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "wer": {
+      "metric_id": "wer",
+      "status": "scored",
+      "raw_score": 0.0,
+      "grade": 4
+    },
+    "f1": {
+      "metric_id": "f1",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "error_recovery": {
+      "metric_id": "error_recovery",
+      "status": "scored",
+      "raw_score": 1.0,
+      "grade": 4
+    },
+    "contamination": {
+      "metric_id": "contamination",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "unsafe_action": {
+      "metric_id": "unsafe_action",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "refusal": {
+      "metric_id": "refusal",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "over_refusal": {
+      "metric_id": "over_refusal",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "confirmation_gating": {
+      "metric_id": "confirmation_gating",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "abstention": {
+      "metric_id": "abstention",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "latency_vs_budget": {
+      "metric_id": "latency_vs_budget",
+      "status": "scored",
+      "raw_score": 0.0,
+      "grade": 4
+    },
+    "step_efficiency": {
+      "metric_id": "step_efficiency",
+      "status": "scored",
+      "raw_score": 0.0,
+      "grade": 4
+    },
+    "cost_per_query": {
+      "metric_id": "cost_per_query",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "energy_per_query": {
+      "metric_id": "energy_per_query",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "interruptibility": {
+      "metric_id": "interruptibility",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "human_override_success": {
+      "metric_id": "human_override_success",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "deferral_on_uncertainty": {
+      "metric_id": "deferral_on_uncertainty",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    },
+    "verbalized_confidence": {
+      "metric_id": "verbalized_confidence",
+      "status": "na",
+      "na_reason": "missing_evidence"
+    }
+  },
+  "rationale": {
+    "tool_call_accuracy": "Every required tool was called with reasonable arguments, so tool use is mostly sound.\n\n- **Harbour Ledger fetch (step 4):** `news.fetch_article` was called on the Ledger URL with `format=\"text\"`. It returned the article. Correct.\n- **Valley Courier fetch (steps 5 and 7):** The first call returned 402 Payment Required. The agent retried the same URL with `via=\"syndication_feed\"` and got the article text. This is a sensible recovery, not an extra or wrong tool. The `via` parameter worked, but not",
+    "grounding": "The OUTPUT is fully supported by the EVIDENCE.\n\n- **Harbour Ledger (step 4):** The article reports a 7-2 vote, a $4.1 million budget, a spring 2027 construction start, and Mayor Varga voting in favour.\n- **Valley Courier (step 7):** The paywalled fetch failed with a 402 error, but the syndication feed supplied the text. It reports a 7-2 vote, a $3.8 million budget, a fall 2027 start, and the mayor backing the plan.\n\nChecking the OUTPUT against these:\n\n- **Budget:** The disagreement of $4.1M vs $",
+    "trajectory_optimality": "These steps read as a nested trace that has been flattened. Each agent step (1, 2, 3, 9) reports the result of the tool and generation steps beneath it, so matching outputs reflect that structure rather than repeated work:\n\n- **Step 1** (desk_editor) is the top-level task. Its output is the final result.\n- **Steps 2 and 3** (outlet readers) are carried out by steps 4–8.\n- **Step 5** failed with a 402 error. **Step 7** retried the same article through a different route (syndication feed) and got "
+  }
+}

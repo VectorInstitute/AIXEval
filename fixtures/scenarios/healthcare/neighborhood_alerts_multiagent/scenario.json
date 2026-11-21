@@ -1,0 +1,8 @@
+{
+  "title": "Heat alerts: multi-agent",
+  "domain": "healthcare",
+  "condition": "Parallel then join",
+  "story": "Same scenario split across a dispatcher, two readers and a synthesizer. The multi-agent metrics now fill robustness and safety.",
+  "description": "A dispatcher delegates each neighborhood's alert log to its own reader agent, then a synthesizer combines both reports into a fairness verdict. Multi-agent, text only.",
+  "condition_id": "F1"
+}

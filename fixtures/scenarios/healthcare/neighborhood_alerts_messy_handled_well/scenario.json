@@ -1,0 +1,8 @@
+{
+  "title": "Heat alerts: tool timeout, honest conclusion",
+  "domain": "healthcare",
+  "condition": "Parallel then join",
+  "story": "A real tool timeout and retry, then an honestly hedged conclusion. Grounding, trajectory and abstention all 4/4. Compare with the overclaimed run.",
+  "description": "One agent checks two neighborhoods' heat alerts; a data tool times out and is retried, and the data stays incomplete. The agent hedges its conclusion. Text only.",
+  "condition_id": "F1"
+}
