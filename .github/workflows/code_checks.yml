@@ -42,7 +42,7 @@ jobs:
           ./gitleaks detect --no-git --source . --redact --verbose
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v9.0.0
+        uses: astral-sh/setup-uv@v10.3.3
         with:
           # Install a specific version of uv.
           version: "0.9.11"
