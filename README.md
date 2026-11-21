@@ -43,12 +43,8 @@ metrics (LLM calls). See [Judge providers](docs/judge-providers.md).
 | Privacy and judge data flows | [`docs/privacy-and-data.md`](docs/privacy-and-data.md) |
 | Self-hosted judge (vLLM) | [`docs/self-hosting.md`](docs/self-hosting.md) |
 
-Build the docs site locally: `uv run mkdocs serve`. Publish **built**
-output (`site/` after `uv run mkdocs build`), not the raw `docs/` folder.
-For GitHub Pages on `AIXEval-dev`, use the **docs** workflow (push to
-`public-version`) and set Pages source to the **`gh-pages` branch** (root),
-or **GitHub Actions** if you switch the workflow to `deploy-pages`.
-`site_url` in `mkdocs.yml` must match `https://vectorinstitute.github.io/AIXEval-dev/`.
+Docs site: <https://vectorinstitute.github.io/aixeval/>. Preview it
+locally with `uv run mkdocs serve`.
 
 Per-metric rationale and citations also live in module docstrings under
 `src/aixeval/scorecard/`.
