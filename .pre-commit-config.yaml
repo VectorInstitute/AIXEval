@@ -48,8 +48,8 @@ repos:
       - id: typos
         args: []
         # Scenario traces are fictional data full of invented names and IDs
-        # (e.g. "Ines" reads as a misspelling of "Lines"). Docs and code are
-        # still checked, including fixtures/README.md.
+        # that typos reads as misspellings. Docs and code are still checked,
+        # including fixtures/README.md.
         exclude: ^fixtures/scenarios/
 
   - repo: https://github.com/nbQA-dev/nbQA
