@@ -139,6 +139,5 @@ sponsors, and the EU **Horizon AIXPERT** project
 [Full acknowledgments](about/acknowledgments.md) ·
 [Licence and citation](about/license-and-citation.md)
 
-
 **Correspondence:** [Email](mailto:shaina.raza@vectorinstitute.ai)
 
