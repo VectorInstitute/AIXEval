@@ -111,4 +111,22 @@ Narayanan, A., & Raza, S. (2026). AIXeval (Version v0.1.1) [Computer software]. 
 https://doi.org/10.5281/zenodo.24468828
 ```
 
+**BibTeX:**
+
+```bibtex
+@software{narayanan_raza_2026_aixeval,
+  author       = {Narayanan, A. and Raza, S.},
+  title        = {AIXeval},
+  year         = {2026},
+  publisher    = {Zenodo},
+  version      = {v0.1.1},
+  doi          = {10.5281/zenodo.24468828},
+  url          = {https://doi.org/10.5281/zenodo.24468828},
+  note         = {Computer software},
+  repository   = {https://github.com/VectorInstitute/AIXEval}
+}
+```
+
+Full citations (APA, MLA, BibTeX, Zenodo links): [`docs/about/license-and-citation.md`](docs/about/license-and-citation.md).
+
 Source code: https://github.com/VectorInstitute/AIXEval

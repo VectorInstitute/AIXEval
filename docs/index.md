@@ -131,6 +131,36 @@ hide:
 
 Phase 2 scope: [Roadmap](about/roadmap.md). [API reference](api.md) for the Python package.
 
+## Cite AIXeval (v0.1.1)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24468828.svg)](https://doi.org/10.5281/zenodo.24468828)
+[Zenodo record](https://zenodo.org/records/24468828) ·
+[GitHub release](https://github.com/VectorInstitute/AIXEval/releases/tag/v0.1.1) ·
+[Full citation formats](about/license-and-citation.md)
+
+**APA**
+
+```text
+Narayanan, A., & Raza, S. (2026). AIXeval (Version v0.1.1) [Computer software]. Zenodo.
+https://doi.org/10.5281/zenodo.24468828
+```
+
+**BibTeX**
+
+```bibtex
+@software{narayanan_raza_2026_aixeval,
+  author       = {Narayanan, A. and Raza, S.},
+  title        = {AIXeval},
+  year         = {2026},
+  publisher    = {Zenodo},
+  version      = {v0.1.1},
+  doi          = {10.5281/zenodo.24468828},
+  url          = {https://doi.org/10.5281/zenodo.24468828},
+  note         = {Computer software},
+  repository   = {https://github.com/VectorInstitute/AIXEval}
+}
+```
+
 ## Acknowledgments
 
 Research supported by the **Province of Ontario**, **CIFAR**, Vector industry
