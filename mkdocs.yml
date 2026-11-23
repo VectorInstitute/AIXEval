@@ -49,12 +49,12 @@ nav:
       - extending/index.md
       - Add a metric: extending/add-a-metric.md
       - Contributing: extending/contributing.md
+  - API Reference: api.md
   - About:
       - about/index.md
       - Roadmap: about/roadmap.md
       - Acknowledgments: about/acknowledgments.md
       - Licence and citation: about/license-and-citation.md
-  - API Reference: api.md
 plugins:
   - search
   - mkdocstrings:
