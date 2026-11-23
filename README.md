@@ -9,6 +9,9 @@ agents and is not a live safety control.
 
 Python **≥ 3.12**. Package name: `aixeval`.
 
+Latest release: [v0.1.1](https://github.com/VectorInstitute/AIXEval/releases/tag/v0.1.1) ·
+DOI: [10.5281/zenodo.24468828](https://doi.org/10.5281/zenodo.24468828)
+
 ## Quick start
 
 From a clone ([uv](https://docs.astral.sh/uv/) recommended):
@@ -99,7 +102,13 @@ necessarily reflect those of the European Union.
 
 See [`CITATION.cff`](CITATION.cff).
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24468828.svg)](https://doi.org/10.5281/zenodo.24468828)
+
+**APA (Zenodo):**
+
 ```text
-Vector Institute. (2026). AIXeval (Version 0.1.1) [Computer software].
-https://github.com/VectorInstitute/AIXEval
+Narayanan, A., & Raza, S. (2026). AIXeval (Version v0.1.1) [Computer software]. Zenodo.
+https://doi.org/10.5281/zenodo.24468828
 ```
+
+Source code: https://github.com/VectorInstitute/AIXEval

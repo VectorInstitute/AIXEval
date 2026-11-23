@@ -3,12 +3,17 @@ title: AIXeval
 message: If you use this software, please cite it as below.
 type: software
 authors:
-  - name: "Vector Institute"
-    website: "https://vectorinstitute.ai"
+  - family-names: Narayanan
+    given-names: A.
+    affiliation: "Vector Institute"
+  - family-names: Raza
+    given-names: S.
+    affiliation: "Vector Institute"
     email: shaina.raza@vectorinstitute.ai
 license: Apache-2.0
 repository-code: "https://github.com/VectorInstitute/AIXEval"
 url: "https://github.com/VectorInstitute/AIXEval"
+doi: 10.5281/zenodo.24468828
 abstract: >-
   Post-hoc scorecard for a saved agent run. Ingest a dump or
   multi-agent trace, score a metric catalog, and roll the
@@ -20,13 +25,21 @@ keywords:
   - LLM-as-judge
   - scorecard
 version: 0.1.1
-date-released: "2026-11-11"
+date-released: "2026-11-23"
 preferred-citation:
   type: software
   title: AIXeval
   authors:
-    - name: "Vector Institute"
+    - family-names: Narayanan
+      given-names: A.
+      affiliation: "Vector Institute"
+    - family-names: Raza
+      given-names: S.
+      affiliation: "Vector Institute"
   year: 2026
-  url: "https://github.com/VectorInstitute/AIXEval"
+  version: v0.1.1
+  publisher: Zenodo
+  doi: 10.5281/zenodo.24468828
+  url: "https://doi.org/10.5281/zenodo.24468828"
 # When the paper is out, replace preferred-citation with the
 # article entry and keep this software record.

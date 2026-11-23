@@ -23,12 +23,23 @@ If you use this software in research, please cite it. Metadata is in
 [`CITATION.cff`](https://github.com/VectorInstitute/AIXEval/blob/main/CITATION.cff)
 on GitHub.
 
-Recommended BibTeX-style reference:
+Recommended reference (matches [Zenodo v0.1.1](https://doi.org/10.5281/zenodo.24468828)):
+
+**APA**
 
 ```text
-Vector Institute. (2026). AIXeval (Version 0.1.1) [Computer software].
-https://github.com/VectorInstitute/AIXEval
+Narayanan, A., & Raza, S. (2026). AIXeval (Version v0.1.1) [Computer software]. Zenodo.
+https://doi.org/10.5281/zenodo.24468828
 ```
+
+**MLA**
+
+```text
+Narayanan, A., and S. Raza. AIXeval. Version v0.1.1, Zenodo, 23 Nov. 2026,
+https://doi.org/10.5281/zenodo.24468828.
+```
+
+Source code: https://github.com/VectorInstitute/AIXEval
 
 For the eight-dimension framing and band policy used on the card, cite
 the methodology sources named in [Methodology](../methodology.md),
